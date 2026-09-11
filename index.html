@@ -50,6 +50,7 @@
     .tag-mma { background: #FAEEDA; color: #854F0B; }
     .tag-f1 { background: #FBE7E6; color: #A6291F; }
     .tag-nfl { background: #EDE7FA; color: #4B2E96; }
+    .tag-golf { background: #E6ECF7; color: #1F3C73; }
     .card h3 { font-size: 15px; font-weight: 500; line-height: 1.45; margin-bottom: 0.5rem; }
     .card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
     .card-meta { margin-top: 1rem; font-size: 12px; color: var(--text-muted); display: flex; gap: 1rem; }
@@ -143,7 +144,23 @@
         <!-- Track -->
         <div id="carousel-track" style="display: flex; transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);">
 
-          <!-- Slide 0: The Same Grass -->
+          <!-- Slide 0: Tags of Hope -->
+          <div class="carousel-slide" onclick="showPage('article-pga-hope')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
+            <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0;">
+              <img src="PGA%20Hope%20Dog%20Tag.jpeg" style="width:100%; height:100%; object-fit:cover;" alt="Personalized PGA HOPE dog tags at the PGA Championship">
+            </div>
+            <div style="padding:1.75rem 2rem 2rem;">
+              <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.85rem;">
+                <span class="card-tag tag-golf" style="margin:0;">PGA</span>
+                <span style="font-size:12px; color:var(--text-muted);">2 min read · September 2026</span>
+              </div>
+              <h3 style="font-family:'DM Serif Display',serif; font-size:28px; font-weight:400; line-height:1.2; margin-bottom:0.75rem;">Tags of Hope</h3>
+              <p style="font-size:15px; color:var(--text-muted); line-height:1.7; margin-bottom:1.25rem;">At the PGA Championship, a free dog tag station honored the 25th anniversary of 9/11 while raising support for veterans through PGA HOPE.</p>
+              <span style="font-size:13px; color:var(--accent); font-weight:500;">Read story →</span>
+            </div>
+          </div>
+
+          <!-- Slide 1: The Same Grass -->
           <div class="carousel-slide" onclick="showPage('article-roquan')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
             <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0;">
               <img src="Roquan%20Smith%20Kids%20Camp%20GA.jpg" style="width:100%; height:100%; object-fit:cover;" alt="Roquan Smith at his youth football camp in Montezuma, Georgia">
@@ -219,6 +236,7 @@
           <button id="dot-1" onclick="carouselGoTo(1)" style="width:8px; height:8px; border-radius:50%; border:none; background:var(--text); opacity:0.3; cursor:pointer; padding:0; transition:opacity 0.2s;"></button>
           <button id="dot-2" onclick="carouselGoTo(2)" style="width:8px; height:8px; border-radius:50%; border:none; background:var(--text); opacity:0.3; cursor:pointer; padding:0; transition:opacity 0.2s;"></button>
           <button id="dot-3" onclick="carouselGoTo(3)" style="width:8px; height:8px; border-radius:50%; border:none; background:var(--text); opacity:0.3; cursor:pointer; padding:0; transition:opacity 0.2s;"></button>
+          <button id="dot-4" onclick="carouselGoTo(4)" style="width:8px; height:8px; border-radius:50%; border:none; background:var(--text); opacity:0.3; cursor:pointer; padding:0; transition:opacity 0.2s;"></button>
         </div>
 
       </div><!-- /carousel -->
@@ -232,9 +250,9 @@
       </div>
 
       <div class="stats">
-        <div class="stat"><div class="stat-num">6</div><div class="stat-label">Stories published</div></div>
+        <div class="stat"><div class="stat-num">7</div><div class="stat-label">Stories published</div></div>
         <div class="stat"><div class="stat-num">7</div><div class="stat-label">Athletes covered</div></div>
-        <div class="stat"><div class="stat-num">9</div><div class="stat-label">Communities featured</div></div>
+        <div class="stat"><div class="stat-num">10</div><div class="stat-label">Communities featured</div></div>
       </div>
     </section>
     <hr>
@@ -301,6 +319,13 @@
           <h3>The Same Grass</h3>
           <p>Before Roquan Smith was one of the highest-paid linebackers in the NFL, he was a kid in Montezuma, Georgia. He never stopped coming back.</p>
           <div class="card-meta"><span>4 min read</span><span>September 2026</span></div>
+        </div>
+        <div class="card" onclick="showPage('article-pga-hope')" style="padding-top: 0; overflow: hidden;">
+          <img class="card-img" src="PGA%20Hope%20Dog%20Tag.jpeg">
+          <div class="card-tag tag-golf">PGA</div>
+          <h3>Tags of Hope</h3>
+          <p>At the PGA Championship, a free dog tag station honored the 25th anniversary of 9/11 while raising support for veterans through PGA HOPE.</p>
+          <div class="card-meta"><span>2 min read</span><span>September 2026</span></div>
         </div>
 
 
@@ -584,6 +609,38 @@
             </div>
             <h3 style="font-size: 17px; font-weight: 500; margin: 0 0 0.35rem; line-height: 1.3;">Walter and Connie Payton Foundation</h3>
             <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">Carrying on Walter and Connie Payton's legacy of community service — and the namesake behind the NFL's annual award recognizing a player's work off the field, for which Roquan Smith was the Ravens' 2023 nominee.</p>
+          </div>
+          <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0; flex-shrink: 0;">Read more →</p>
+        </div>
+
+        <!-- PGA of America -->
+        <div onclick="showPage('article-pga-hope')" style="cursor: pointer; display: flex; align-items: center; gap: 1.75rem; background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem 2rem; transition: border-color 0.15s, transform 0.15s;" onmouseover="this.style.borderColor='var(--border-strong)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="flex-shrink: 0; width: 88px; height: 88px; border-radius: 12px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="PGA%20of%20America%20Logo.png" style="width: 80%; height: 80%; object-fit: contain;" alt="PGA of America">
+          </div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem;">
+              <span class="card-tag tag-golf" style="margin: 0;">Association</span>
+              <span style="font-size: 12px; color: var(--text-muted);">Frisco, TX · est. 1916</span>
+            </div>
+            <h3 style="font-size: 17px; font-weight: 500; margin: 0 0 0.35rem; line-height: 1.3;">PGA of America</h3>
+            <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">The organization behind the PGA Championship, which set up a free dog tag station at Aronimink Golf Club to honor 9/11 and support its PGA HOPE veterans program.</p>
+          </div>
+          <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0; flex-shrink: 0;">Read more →</p>
+        </div>
+
+        <!-- PGA HOPE -->
+        <div onclick="showPage('article-pga-hope')" style="cursor: pointer; display: flex; align-items: center; gap: 1.75rem; background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem 2rem; transition: border-color 0.15s, transform 0.15s;" onmouseover="this.style.borderColor='var(--border-strong)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="flex-shrink: 0; width: 88px; height: 88px; border-radius: 12px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="PGA%20Hope.png" style="width: 80%; height: 80%; object-fit: contain;" alt="PGA HOPE">
+          </div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem;">
+              <span class="card-tag tag-golf" style="margin: 0;">Program</span>
+              <span style="font-size: 12px; color: var(--text-muted);">Frisco, TX · est. 2015</span>
+            </div>
+            <h3 style="font-size: 17px; font-weight: 500; margin: 0 0 0.35rem; line-height: 1.3;">PGA HOPE</h3>
+            <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">The flagship veterans program of the PGA of America REACH Foundation, introducing golf to active-duty military members and veterans as a tool for connection and healing.</p>
           </div>
           <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0; flex-shrink: 0;">Read more →</p>
         </div>
@@ -944,6 +1001,54 @@
     </div>
   </div>
 
+  <!-- ARTICLE PAGE: Tags of Hope (PGA HOPE) -->
+  <div id="page-article-pga-hope" class="page">
+    <div class="article-body">
+      <button class="article-back" onclick="showPage('stories')">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to stories
+      </button>
+
+      <div style="margin-bottom: 1rem;">
+        <span class="card-tag tag-golf" style="font-size: 12px; padding: 4px 12px;">PGA</span>
+      </div>
+
+      <h1 style="font-family: 'DM Serif Display', serif; font-size: 40px; font-weight: 400; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 1.5rem;">Tags of Hope</h1>
+
+      <div style="font-size: 13px; color: var(--text-muted); display: flex; gap: 1.25rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 0.5px solid var(--border);">
+        <span>September 2026</span>
+        <span>2 min read</span>
+        <span>By Off Court Insider</span>
+      </div>
+
+      <div style="margin: 0 0 2.5rem; border-radius: var(--radius-lg); overflow: hidden; border: 0.5px solid var(--border);">
+        <img src="PGA%20Hope%20Dog%20Tag.jpeg" style="width: 100%; display: block;" alt="Personalized PGA HOPE dog tags at the PGA Championship">
+      </div>
+      <p style="font-size: 11px; color: var(--text-muted); margin-top: -2rem; margin-bottom: 2rem;">Photo PGA HOPE Instagram</p>
+
+      <p>This year's PGA Championship at Aronimink Golf Club in Newtown Square, Pennsylvania, took place four months ahead of the 25th year commemorating the terrorist attacks on New York City, the Pentagon, and Shanksville, near Pittsburgh — but the tournament didn't wait for the date itself to honor it.</p>
+
+      <p style="font-size: 20px; font-weight: 500; color: var(--text); margin: 2.5rem 0 1rem; font-family: 'DM Serif Display', serif;">A Small Token, Tied to Something Larger</p>
+
+      <p>The event set up a free dog tag station in the fan experience area, just outside the back of the merchandise store, giving tournament spectators and attendees a chance to give back to the military and veterans. Visitors could personalize a tag with custom text — a small, physical token tied to a much larger act of remembrance.</p>
+
+      <p style="font-size: 20px; font-weight: 500; color: var(--text); margin: 2.5rem 0 1rem; font-family: 'DM Serif Display', serif;">Supporting PGA HOPE</p>
+
+      <p>The dog tag station also served, and continues to serve, a purpose beyond commemoration. It benefited PGA HOPE (Helping Our Patriots Everywhere), the PGA of America REACH Foundation's program that introduces golf to active-duty military members and veterans as a tool for connection and healing.</p>
+
+      <div style="margin: 2.5rem 0 0.5rem; border-radius: var(--radius-lg); overflow: hidden; border: 0.5px solid var(--border);">
+        <img src="Dog%20Tag%20Station.jpeg" style="width: 100%; display: block;" alt="The Dog Tag Station at the PGA Championship, staffed by PGA HOPE volunteers">
+      </div>
+      <p style="font-size: 11px; color: var(--text-muted); margin-top: 0; margin-bottom: 2rem;">Photo PGA HOPE Instagram · 2026 PGA Championship</p>
+
+      <p>It's a small gesture measured against the weight of what's being commemorated. Golf, an outlet PGA HOPE has used to support thousands of veterans, was both a memorial and a mission put on display at one of the PGA's biggest stages.</p>
+
+      <p>Those interested in supporting PGA HOPE can donate directly at <a href="https://www.pgareach.org/pgahope" target="_blank" rel="noopener" style="color: #378ADD; font-weight: 500; text-decoration: none;">pgareach.org/pgahope →</a></p>
+
+      <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charlie Kunkel · Published Friday, September 11, 2026 at 4:30 PM ET</p>
+    </div>
+  </div>
+
   <footer>
     <div class="footer-logo">Off Court <span>Insider</span></div>
     <span>© 2026 · All rights reserved</span>
@@ -985,7 +1090,7 @@
     // ── Home page carousel ──────────────────────────────────────────────────
     (function() {
       var current = 0;
-      var total   = 4;
+      var total   = 5;
       var timer;
 
       function goTo(n) {
