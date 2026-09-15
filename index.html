@@ -127,9 +127,50 @@
     .footer-logo span { color: var(--accent); }
     @media (max-width: 768px) { .about-layout { grid-template-columns: 1fr; gap: 2rem; } .about-founder { position: static; } }
     @media (max-width: 600px) { .hero h1 { font-size: 36px; } .mission-hero h1 { font-size: 30px; } .nav-links { display: none; } .stats { grid-template-columns: 1fr; } .email-row { flex-direction: column; } footer { flex-direction: column; gap: 8px; text-align: center; } .values-grid { grid-template-columns: 1fr; } }
+
+    /* ══ AMBIENT BACKGROUND BACKDROP (reusable component) ══════════════════
+       A single tiled backdrop image spanning the whole document, sitting
+       behind every page. It never affects layout: position:absolute +
+       z-index:-1, so it takes no space and can't shift anything. Its
+       height and mask-image are kept in sync with scroll position by the
+       script near the end of the file — the mask keeps a band around
+       wherever you're currently scrolled to fully visible and fades the
+       rest to transparent, so the pattern always "follows" your place on
+       the page instead of only living at the top. */
+    #bg-backdrop {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1; pointer-events: none;
+      background-image: url('OCI%20Backdrop.png');
+      background-repeat: repeat; background-size: 480px auto;
+      mix-blend-mode: screen; filter: brightness(1.6) contrast(1.15);
+      opacity: 0.9;
+    }
+    @media (max-width: 600px) { #bg-backdrop { background-size: 320px auto; } }
+    /* Two plain solid-color panels, painted just above the backdrop image,
+       that grow to cover whatever's out of range above and below your
+       current reading position — each with a soft trailing edge so the
+       cover blends into the lit band instead of ending in a hard line.
+       Net effect: shapes go dark as you scroll away from them, in either
+       direction, and relight as you scroll back toward them. */
+    #bg-fade-cover-top {
+      position: absolute; top: 0; left: 0; width: 100%; height: 0; z-index: -1; pointer-events: none;
+      background: linear-gradient(to bottom, var(--bg) 0%, var(--bg) calc(100% - 60vh), transparent 100%);
+    }
+    #bg-fade-cover-bottom {
+      position: absolute; left: 0; width: 100%; height: 0; z-index: -1; pointer-events: none;
+      background: linear-gradient(to top, var(--bg) 0%, var(--bg) calc(100% - 60vh), transparent 100%);
+    }
   </style>
 </head>
 <body>
+
+  <!-- ══ AMBIENT BACKGROUND BACKDROP ═════════════════════════════════════
+       Drop-in decoration layer — one instance covers every "page" in this
+       single-file site since they all share the document. Copy this div
+       (+ its CSS above) onto any other page as-is if the site is ever
+       split into separate files. ══ -->
+  <div id="bg-backdrop" aria-hidden="true"></div>
+  <div id="bg-fade-cover-top" aria-hidden="true"></div>
+  <div id="bg-fade-cover-bottom" aria-hidden="true"></div>
 
   <nav>
     <a href="#" class="logo" onclick="showPage('home'); return false;">Off Court <span>Insider</span></a>
@@ -1271,6 +1312,68 @@
 
       // auto-start (home is active on load)
       resetTimer();
+    })();
+
+    // ── Ambient backdrop: dark outside a lit band around your position ──────
+    // Two plain solid-color panels (#bg-fade-cover-top/-bottom) sit just
+    // above the backdrop image. On every scroll, we resize them so only a
+    // band around the current viewport (plus a margin) is left uncovered —
+    // shapes above that band get covered by the top panel, shapes below it
+    // by the bottom panel, both with a soft trailing gradient (set in CSS)
+    // so the cover blends in rather than cutting off hard. Since this runs
+    // on every scroll in both directions, shapes darken as you move away
+    // from them and relight as you scroll back toward them either way.
+    (function() {
+      var backdrop = document.getElementById('bg-backdrop');
+      var coverTop = document.getElementById('bg-fade-cover-top');
+      var coverBottom = document.getElementById('bg-fade-cover-bottom');
+      if (!backdrop || !coverTop || !coverBottom) return;
+      var ticking = false;
+
+      // the layer spans the full document; keep it in sync since switching
+      // between this site's virtual "pages" changes that height instantly.
+      function syncHeight() {
+        backdrop.style.height = document.body.scrollHeight + 'px';
+      }
+
+      function updateFade() {
+        var vh = window.innerHeight;
+        var scrollY = window.scrollY;
+        var docH = document.body.scrollHeight;
+        var fadeDepth = vh * 0.6; // how far into the viewport (top and bottom) the visible dissolve reaches
+
+        // top cover's height reaches fadeDepth *into* the viewport, so its
+        // trailing gradient (also fadeDepth tall, set in CSS) transitions
+        // from fully dark right at the viewport's top edge to fully clear
+        // fadeDepth lower — a visible fade inside the screen, not behind it.
+        var topH = Math.max(0, scrollY + fadeDepth);
+        coverTop.style.height = topH + 'px';
+
+        var bottomTop = scrollY + vh - fadeDepth;
+        var bottomH = Math.max(0, docH - bottomTop);
+        coverBottom.style.height = bottomH + 'px';
+        coverBottom.style.top = (docH - bottomH) + 'px';
+
+        ticking = false;
+      }
+
+      function onScroll() {
+        if (!ticking) { ticking = true; requestAnimationFrame(updateFade); }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', function() { syncHeight(); onScroll(); });
+
+      // re-measure whenever a virtual "page" is swapped in, since that
+      // changes the document height without a scroll or resize event
+      var origShowForBackdrop = window.showPage;
+      window.showPage = function(name) {
+        if (origShowForBackdrop) origShowForBackdrop(name);
+        requestAnimationFrame(function() { syncHeight(); updateFade(); });
+      };
+
+      syncHeight();
+      updateFade();
     })();
 
   </script>
