@@ -27,6 +27,8 @@
     .nav-indicator { position: absolute; top: 0; bottom: 0; left: 0; width: 0; background: var(--bg-secondary); border-radius: var(--radius-md); transition: transform 0.3s cubic-bezier(0.2,0.8,0.2,1), width 0.3s cubic-bezier(0.2,0.8,0.2,1); z-index: 0; pointer-events: none; }
     .nav-cta { font-size: 13px; font-family: 'Hanken Grotesk', sans-serif; padding: 7px 18px; border: 0.5px solid var(--border-strong); border-radius: var(--radius-md); background: transparent; color: var(--text); cursor: pointer; transition: background 0.15s; flex-shrink: 0; }
     .nav-cta:hover { background: var(--bg-secondary); }
+    .nav-menu-btn { display: none; background: none; border: 0.5px solid var(--border-strong); border-radius: var(--radius-md); color: var(--text); cursor: pointer; padding: 8px; align-items: center; justify-content: center; margin-left: 10px; flex-shrink: 0; }
+    .mobile-menu { display: none; }
     .page { display: none; }
     .page.active { display: block; animation: pageIn 0.45s ease; }
     @keyframes pageIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
@@ -126,7 +128,20 @@
     .footer-logo { font-family: 'DM Serif Display', serif; font-size: 16px; color: var(--text); }
     .footer-logo span { color: var(--accent); }
     @media (max-width: 768px) { .about-layout { grid-template-columns: 1fr; gap: 2rem; } .about-founder { position: static; } }
-    @media (max-width: 600px) { .hero h1 { font-size: 36px; } .mission-hero h1 { font-size: 30px; } .nav-links { display: none; } .stats { grid-template-columns: 1fr; } .email-row { flex-direction: column; } footer { flex-direction: column; gap: 8px; text-align: center; } .values-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 36px; } .mission-hero h1 { font-size: 30px; } .nav-links { display: none; } .stats { grid-template-columns: 1fr; } .email-row { flex-direction: column; } footer { flex-direction: column; gap: 8px; text-align: center; } .values-grid { grid-template-columns: 1fr; }
+      .nav-menu-btn { display: flex; }
+      .nav-cta { display: none; }
+      .mobile-menu {
+        display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--bg); border-bottom: 0.5px solid var(--border); padding: 0.5rem 1.25rem 1.25rem;
+        max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.3s ease, opacity 0.25s ease;
+      }
+      .mobile-menu.open { max-height: 400px; opacity: 1; }
+      .mobile-menu a { padding: 14px 4px; font-size: 16px; font-weight: 500; color: var(--text-muted); text-decoration: none; border-bottom: 0.5px solid var(--border); }
+      .mobile-menu a.active { color: var(--accent); }
+      .mobile-menu-cta { display: block; width: 100%; margin-top: 1rem; padding: 12px; text-align: center; }
+    }
 
     /* ══ AMBIENT BACKGROUND BACKDROP (reusable component) ══════════════════
        A single tiled backdrop image spanning the whole document, sitting
@@ -182,6 +197,16 @@
       <li><a href="#" onclick="showPage('about'); return false;" id="nav-about">About Us</a></li>
     </ul>
     <button class="nav-cta">Subscribe</button>
+    <button class="nav-menu-btn" id="navMenuBtn" onclick="toggleMobileMenu()" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5.5h14M3 10h14M3 14.5h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#" onclick="showPage('stories'); return false;" data-page="stories">Stories</a>
+      <a href="#" onclick="showPage('athletes'); return false;" data-page="athletes">Athletes</a>
+      <a href="#" onclick="showPage('organizations'); return false;" data-page="organizations">Organizations</a>
+      <a href="#" onclick="showPage('about'); return false;" data-page="about">About Us</a>
+      <button class="nav-cta mobile-menu-cta" onclick="closeMobileMenu()">Subscribe</button>
+    </div>
   </nav>
 
   <!-- HOME PAGE -->
@@ -1169,14 +1194,33 @@
     document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeStory(); });
     function showPage(name) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(a => a.classList.remove('active'));
       const page = document.getElementById('page-' + name);
       if (page) page.classList.add('active');
       const navLink = document.getElementById('nav-' + name);
       if (navLink) navLink.classList.add('active');
+      document.querySelectorAll('.mobile-menu a[data-page="' + name + '"]').forEach(a => a.classList.add('active'));
       window.scrollTo({ top: 0, behavior: 'smooth' });
       moveNavIndicator();
+      closeMobileMenu();
     }
+
+    // ── Mobile dropdown menu ─────────────────────────────────────────────────
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.getElementById('navMenuBtn');
+      const isOpen = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.getElementById('navMenuBtn');
+      if (menu) menu.classList.remove('open');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    }
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('nav')) closeMobileMenu();
+    });
 
     // ── Sliding nav indicator ────────────────────────────────────────────────
     function moveNavIndicator() {
