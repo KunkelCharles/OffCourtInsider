@@ -224,7 +224,23 @@
         <!-- Track -->
         <div id="carousel-track" style="display: flex; transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);">
 
-          <!-- Slide 0: Mustangs in the Community -->
+          <!-- Slide 0: Every Kid Deserves a Seat -->
+          <div class="carousel-slide" onclick="showPage('article-community-tickets')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
+            <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0; -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent); mask-image:linear-gradient(to bottom, #000 78%, transparent);">
+              <img src="NBA%20Community%20Ticket%20Programs.webp" style="width:100%; height:100%; object-fit:cover;" alt="NBA x Community Ticket Programs">
+            </div>
+            <div style="padding:1.75rem 2rem 2rem;">
+              <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.85rem;">
+                <span class="card-tag tag-nba" style="margin:0;">NBA</span>
+                <span style="font-size:12px; color:var(--text-muted);">3 min read · September 2026</span>
+              </div>
+              <h3 style="font-family:'Fraunces',serif; font-size:28px; font-weight:400; line-height:1.2; margin-bottom:0.75rem;">Every Kid Deserves a Seat</h3>
+              <p style="font-size:15px; color:var(--text-muted); line-height:1.7; margin-bottom:1.25rem;">Across the league, NBA franchises are setting aside free game tickets for kids from under-resourced communities — turning a night watched from a distance into one experienced firsthand.</p>
+              <span style="font-size:13px; color:var(--accent); font-weight:500;">Read story →</span>
+            </div>
+          </div>
+
+          <!-- Slide 1: Mustangs in the Community -->
           <div class="carousel-slide" onclick="showPage('article-smu')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
             <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0; background:#0033A0; -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent); mask-image:linear-gradient(to bottom, #000 78%, transparent);">
               <img src="SMU%20Athletics%20Logo.jpg" style="width:100%; height:100%; object-fit:cover;" alt="SMU Athletics logo">
@@ -301,6 +317,7 @@
           <button id="dot-1" onclick="carouselGoTo(1)" style="width:8px; height:8px; border-radius:50%; border:none; background:var(--text); opacity:0.3; cursor:pointer; padding:0; transition:opacity 0.2s;"></button>
           <button id="dot-2" onclick="carouselGoTo(2)" style="width:8px; height:8px; border-radius:50%; border:none; background:var(--text); opacity:0.3; cursor:pointer; padding:0; transition:opacity 0.2s;"></button>
           <button id="dot-3" onclick="carouselGoTo(3)" style="width:8px; height:8px; border-radius:50%; border:none; background:var(--text); opacity:0.3; cursor:pointer; padding:0; transition:opacity 0.2s;"></button>
+          <button id="dot-4" onclick="carouselGoTo(4)" style="width:8px; height:8px; border-radius:50%; border:none; background:var(--text); opacity:0.3; cursor:pointer; padding:0; transition:opacity 0.2s;"></button>
         </div>
 
       </div><!-- /carousel -->
@@ -314,7 +331,7 @@
       </div>
 
       <div class="stats">
-        <div class="stat"><div class="stat-num">8</div><div class="stat-label">Stories published</div></div>
+        <div class="stat"><div class="stat-num">9</div><div class="stat-label">Stories published</div></div>
         <div class="stat"><div class="stat-num">7</div><div class="stat-label">Athletes covered</div></div>
         <div class="stat"><div class="stat-num">11</div><div class="stat-label">Communities featured</div></div>
       </div>
@@ -340,6 +357,13 @@
     <section class="section" style="padding-top: 1.5rem;">
       <div style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 30px; color: var(--text); margin-bottom: 2rem;">Catalog</div>
       <div class="cards-grid">
+        <div class="card" onclick="showPage('article-community-tickets')" style="padding-top: 0; overflow: hidden;">
+          <img class="card-img" src="NBA%20Community%20Ticket%20Programs.webp">
+          <div class="card-tag tag-nba">NBA</div>
+          <h3>Every Kid Deserves a Seat</h3>
+          <p>Across the league, NBA franchises are setting aside free game tickets for kids from under-resourced communities — turning a night watched from a distance into one experienced firsthand.</p>
+          <div class="card-meta"><span>3 min read</span><span>September 2026</span></div>
+        </div>
         <div class="card" onclick="showPage('article-smu')" style="padding-top: 0; overflow: hidden;">
           <img class="card-img" src="SMU%20Athletics%20Logo.jpg">
           <div class="card-tag tag-ncaa">NCAA</div>
@@ -1162,6 +1186,137 @@
       <p>Learn more about SMU Athletics and their mission off the court at <a href="https://smumustangs.com/sports/2022/9/4/life-skills-community" target="_blank" rel="noopener" style="color: #378ADD; font-weight: 500; text-decoration: none;">smumustangs.com →</a></p>
 
       <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charles Kunkel · Published Monday, September 14, 2026 at 5:00 PM ET</p>
+    </div>
+  </div>
+
+  <!-- ARTICLE PAGE: Every Kid Deserves a Seat (NBA Community Tickets) -->
+  <div id="page-article-community-tickets" class="page">
+    <div class="article-body">
+      <button class="article-back" onclick="showPage('stories')">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to stories
+      </button>
+
+      <div style="margin-bottom: 1rem;">
+        <span class="card-tag tag-nba" style="font-size: 12px; padding: 4px 12px;">NBA</span>
+      </div>
+
+      <h1 style="font-family: 'Fraunces', serif; font-size: 40px; font-weight: 400; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 1.5rem;">Every Kid Deserves a Seat</h1>
+
+      <div style="font-size: 13px; color: var(--text-muted); display: flex; gap: 1.25rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 0.5px solid var(--border);">
+        <span>September 2026</span>
+        <span>3 min read</span>
+        <span>By Off Court Insider</span>
+      </div>
+
+      <div style="margin: 0 0 2.5rem; border-radius: var(--radius-lg); overflow: hidden; border: 0.5px solid var(--border);">
+        <img src="NBA%20Community%20Ticket%20Programs.webp" style="width: 100%; display: block;" alt="NBA x Community Ticket Programs">
+      </div>
+
+      <p>For many young sports fans, the difference between listening to a basketball game on the radio and sitting courtside isn't a matter of preference — it's a matter of cost. Tickets, parking, and concessions for a single night at an NBA arena are far beyond what many families can spare. For kids growing up in under-resourced communities, that gap often means professional sports are watched from a distance, and never experienced firsthand.</p>
+
+      <p>Many NBA franchises are working to close that gap through Community Ticket programs, which set aside game tickets for youth — specifically those who qualify through local partner organizations like rec centers, Boys & Girls Clubs, and after-school programs. The concept is simple, and it goes a long way: give kids who've shown up and put in the work a seat at the game, at no cost to them or their families.</p>
+
+      <p>The Dallas Mavericks, Los Angeles Clippers, Oklahoma City Thunder, Detroit Pistons, and Washington Wizards are among the teams running these initiatives, each with a slightly different approach tailored to the kids of their city. The Mavericks partner with Dallas-area youth programs to send kids to American Airlines Center. The Clippers do the same in Inglewood through Intuit Dome. The Thunder work with Oklahoma City schools and community groups, the Pistons reach across Detroit's east and west sides, and the Wizards give opportunity to kids all around the D.C. area.</p>
+
+      <p>What makes these programs meaningful isn't just the free ticket, it's what the experience can give long-term. For a kid who plays the sport every day but has never seen it played live, sitting close enough to hear sneakers squeak on hardwood and feel the crowd beside them can be transformative. It's proof that the players they watch on TV are real, reachable, human — and that the path from a neighborhood gym to a professional court is possible.</p>
+
+      <div style="margin: 2.5rem 0;">
+        <p style="font-size: 24px; font-weight: 500; line-height: 1.4; color: var(--text); margin: 0; font-family: 'Fraunces', serif; font-style: italic;">"A team isn't just an entity that plays 41 home games a year, it's the heart and soul of a city."</p>
+      </div>
+
+      <p>These programs strengthen the bond between a franchise and the community. This kind of opportunity makes sure the next generation of fans, regardless of income, gets to walk through the doors and watch their team in person. This connection shouldn't be exclusive to those who can afford it.</p>
+
+      <p>Sports teach discipline, teamwork, and resilience. But there's more to it than that — the most powerful moments don't come from a practice court, they're witnessed live, from a seat that would have otherwise been out of reach. For the kids these programs are built for, that single night can be the spark that turns hesitation into lasting motivation.</p>
+
+      <p>These programs aren't limited to a handful of markets — it's a league-wide effort, with nearly every NBA franchise running its own version of the initiative. Find your team below and request tickets directly through their program.</p>
+
+      <p style="font-size: 20px; font-weight: 500; color: var(--text); margin: 2.5rem 0 1rem; font-family: 'Fraunces', serif;">Find Your Team</p>
+
+      <div style="border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin: 0.5rem 0 2.5rem;">
+        <a href="https://www.nba.com/hawks/community-tickets-request" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Atlanta Hawks</strong><span style="color: var(--text-muted);"> — Hawks Heroes Community Ticket Program</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://admin.donationx.org/Forms/Quiz/quiz?s=b7575895-f8b7-4f42-a106-c504def5be8f" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Boston Celtics</strong><span style="color: var(--text-muted);"> — Shamrock Foundation Community Ticket Program</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/hornets/community" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Charlotte Hornets</strong><span style="color: var(--text-muted);"> — Community Tickets / Player Nation</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/bulls/community/ticket-requests" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Chicago Bulls</strong><span style="color: var(--text-muted);"> — Charitable Ticket Requests</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/mavs/community" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Dallas Mavericks</strong><span style="color: var(--text-muted);"> — Mavs Community Tickets</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/pistons/community-tickets" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Detroit Pistons</strong><span style="color: var(--text-muted);"> — Community Ticket Program</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/pacers/pacers-pals-registration" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Indiana Pacers</strong><span style="color: var(--text-muted);"> — Pacers Pals</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/clippers/community/ticket-request" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">LA Clippers</strong><span style="color: var(--text-muted);"> — Clippers Community Tickets</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/grizzlies/grizz-ticket-assist" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Memphis Grizzlies</strong><span style="color: var(--text-muted);"> — Grizz Ticket Assist</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/heat/community/foundation" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Miami Heat</strong><span style="color: var(--text-muted);"> — HEAT Player Ticket Program</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/bucks/community" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Milwaukee Bucks</strong><span style="color: var(--text-muted);"> — Charitable / Community Tickets</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/timberwolves/community/packtickets" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Minnesota Timberwolves</strong><span style="color: var(--text-muted);"> — Pack Gives Back Community Tickets</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/thunder/communitytickets" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Oklahoma City Thunder</strong><span style="color: var(--text-muted);"> — Community Ticket Program</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/magic/sharethemagic" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Orlando Magic</strong><span style="color: var(--text-muted);"> — Share the Magic</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/sixers/donations" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Philadelphia 76ers</strong><span style="color: var(--text-muted);"> — Community Assist / Ticket Assist</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/suns/foundation/tickets4kids" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Phoenix Suns</strong><span style="color: var(--text-muted);"> — Tickets4Kids</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/kings/community" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Sacramento Kings</strong><span style="color: var(--text-muted);"> — Community Ticket Program</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://spursimpact.com/grants-and-giving/" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">San Antonio Spurs</strong><span style="color: var(--text-muted);"> — Spurs Give Community Ticket Program</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/jazz/community/communityticketprogram" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s; border-bottom: 0.5px solid var(--border);" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Utah Jazz</strong><span style="color: var(--text-muted);"> — Community Ticket Program</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+        <a href="https://www.nba.com/wizards/community" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.95rem 1.25rem; text-decoration: none; color: var(--text); transition: background 0.15s;" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+          <span style="font-size: 14px; line-height: 1.4;"><strong style="font-weight: 500;">Washington Wizards</strong><span style="color: var(--text-muted);"> — Community Ticket Program</span></span>
+          <span style="font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap;">Request tickets →</span>
+        </a>
+      </div>
+
+      <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charles Kunkel · Published Monday, September 21, 2026 at 5:00 PM ET</p>
     </div>
   </div>
 
