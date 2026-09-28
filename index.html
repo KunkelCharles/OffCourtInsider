@@ -224,7 +224,23 @@
         <!-- Track -->
         <div id="carousel-track" style="display: flex; transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);">
 
-          <!-- Slide 0: Every Kid Deserves a Seat -->
+          <!-- Slide 0: Built on the Hilltop -->
+          <div class="carousel-slide" onclick="showPage('article-sanders')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
+            <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0; background:#0033A0; -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent); mask-image:linear-gradient(to bottom, #000 78%, transparent);">
+              <img src="Emmanuel%20Sanders%20Community.jpg" style="width:100%; height:100%; object-fit:cover;" alt="Emmanuel Sanders with kids and teachers in Buffalo">
+            </div>
+            <div style="padding:1.75rem 2rem 2rem;">
+              <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.85rem;">
+                <span class="card-tag tag-nfl" style="margin:0;">NFL</span>
+                <span style="font-size:12px; color:var(--text-muted);">3 min read · September 2026</span>
+              </div>
+              <h3 style="font-family:'Fraunces',serif; font-size:28px; font-weight:400; line-height:1.2; margin-bottom:0.75rem;">Built on the Hilltop</h3>
+              <p style="font-size:15px; color:var(--text-muted); line-height:1.7; margin-bottom:1.25rem;">Emmanuel Sanders learned what giving back looks like as a Mustang in Dallas. Now his foundation is making sure kids have the food, support, and opportunity to chase their dreams.</p>
+              <span style="font-size:13px; color:var(--accent); font-weight:500;">Read story →</span>
+            </div>
+          </div>
+
+          <!-- Slide 1: Every Kid Deserves a Seat -->
           <div class="carousel-slide" onclick="showPage('article-community-tickets')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
             <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0; -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent); mask-image:linear-gradient(to bottom, #000 78%, transparent);">
               <img src="NBA%20Community%20Ticket%20Programs.webp" style="width:100%; height:100%; object-fit:cover;" alt="NBA x Community Ticket Programs">
@@ -318,6 +334,7 @@
           <button id="dot-2" onclick="carouselGoTo(2)" style="width:8px; height:8px; border-radius:50%; border:none; background:var(--text); opacity:0.3; cursor:pointer; padding:0; transition:opacity 0.2s;"></button>
           <button id="dot-3" onclick="carouselGoTo(3)" style="width:8px; height:8px; border-radius:50%; border:none; background:var(--text); opacity:0.3; cursor:pointer; padding:0; transition:opacity 0.2s;"></button>
           <button id="dot-4" onclick="carouselGoTo(4)" style="width:8px; height:8px; border-radius:50%; border:none; background:var(--text); opacity:0.3; cursor:pointer; padding:0; transition:opacity 0.2s;"></button>
+          <button id="dot-5" onclick="carouselGoTo(5)" style="width:8px; height:8px; border-radius:50%; border:none; background:var(--text); opacity:0.3; cursor:pointer; padding:0; transition:opacity 0.2s;"></button>
         </div>
 
       </div><!-- /carousel -->
@@ -331,8 +348,8 @@
       </div>
 
       <div class="stats">
-        <div class="stat"><div class="stat-num">9</div><div class="stat-label">Stories published</div></div>
-        <div class="stat"><div class="stat-num">7</div><div class="stat-label">Athletes covered</div></div>
+        <div class="stat"><div class="stat-num">10</div><div class="stat-label">Stories published</div></div>
+        <div class="stat"><div class="stat-num">8</div><div class="stat-label">Athletes covered</div></div>
         <div class="stat"><div class="stat-num">11</div><div class="stat-label">Communities featured</div></div>
       </div>
     </section>
@@ -357,6 +374,13 @@
     <section class="section" style="padding-top: 1.5rem;">
       <div style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 30px; color: var(--text); margin-bottom: 2rem;">Catalog</div>
       <div class="cards-grid">
+        <div class="card" onclick="showPage('article-sanders')" style="padding-top: 0; overflow: hidden;">
+          <img class="card-img" src="Emmanuel%20Sanders%20Community.jpg" style="object-position: center;">
+          <div class="card-tag tag-nfl">NFL</div>
+          <h3>Built on the Hilltop</h3>
+          <p>Emmanuel Sanders learned what giving back looks like as a Mustang in Dallas. Now his foundation is making sure kids have the food, support, and opportunity to chase their dreams.</p>
+          <div class="card-meta"><span>3 min read</span><span>September 2026</span></div>
+        </div>
         <div class="card" onclick="showPage('article-community-tickets')" style="padding-top: 0; overflow: hidden;">
           <img class="card-img" src="NBA%20Community%20Ticket%20Programs.webp">
           <div class="card-tag tag-nba">NBA</div>
@@ -523,6 +547,18 @@
             <span style="display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 8px; background: #013369; color: #fff; margin-bottom: 0.75rem;">NFL</span>
             <h3 style="font-family: 'Fraunces', serif; font-size: 22px; font-weight: 400; margin: 0 0 0.5rem; line-height: 1.2;">Roquan Smith</h3>
             <p style="font-size: 14px; color: var(--text-muted); margin: 0 0 1rem; line-height: 1.6;">Baltimore Ravens linebacker and founder of the Roquan Smith Foundation, running free football camps for underserved kids in his hometown of Montezuma, Georgia, and in Baltimore.</p>
+            <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0;">Read his story →</p>
+          </div>
+        </div>
+
+        <div onclick="showPage('article-sanders')" style="cursor: pointer; border: 0.5px solid rgba(242,236,225,0.12); border-radius: 12px; overflow: hidden; transition: transform 0.15s, border-color 0.15s;" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='rgba(242,236,225,0.24)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='rgba(242,236,225,0.12)'">
+          <div style="width: 100%; height: 320px; overflow: hidden;">
+            <img src="Emmanuel%20Sanders%20Headshot.jpg" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" alt="Emmanuel Sanders">
+          </div>
+          <div style="padding: 1.25rem 1.35rem 1.5rem;">
+            <span style="display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 8px; background: #013369; color: #fff; margin-bottom: 0.75rem;">NFL</span>
+            <h3 style="font-family: 'Fraunces', serif; font-size: 22px; font-weight: 400; margin: 0 0 0.5rem; line-height: 1.2;">Emmanuel Sanders</h3>
+            <p style="font-size: 14px; color: var(--text-muted); margin: 0 0 1rem; line-height: 1.6;">SMU alum, Super Bowl champion, and founder of the Emmanuel Sanders Foundation, fighting food insecurity and opening doors for kids from low-income families.</p>
             <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0;">Read his story →</p>
           </div>
         </div>
@@ -729,6 +765,38 @@
             </div>
             <h3 style="font-size: 17px; font-weight: 500; margin: 0 0 0.35rem; line-height: 1.3;">PGA HOPE</h3>
             <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">The flagship veterans program of the PGA of America REACH Foundation, introducing golf to active-duty military members and veterans as a tool for connection and healing.</p>
+          </div>
+          <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0; flex-shrink: 0;">Read more →</p>
+        </div>
+
+        <!-- Emmanuel Sanders Foundation -->
+        <div onclick="showPage('article-sanders')" style="cursor: pointer; display: flex; align-items: center; gap: 1.75rem; background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem 2rem; transition: border-color 0.15s, transform 0.15s;" onmouseover="this.style.borderColor='var(--border-strong)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="flex-shrink: 0; width: 88px; height: 88px; border-radius: 12px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Emmanuel%20Sanders%20Foundation%20Logo.jpg" style="width: 80%; height: 80%; object-fit: contain;" alt="Emmanuel Sanders Foundation">
+          </div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem;">
+              <span class="card-tag tag-community" style="margin: 0;">Foundation</span>
+              <span style="font-size: 12px; color: var(--text-muted);">Buffalo, NY · est. 2017</span>
+            </div>
+            <h3 style="font-size: 17px; font-weight: 500; margin: 0 0 0.35rem; line-height: 1.3;">Emmanuel Sanders Foundation</h3>
+            <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">Founded by SMU alum and Super Bowl champion Emmanuel Sanders, giving kids from low-income families holiday support, educational opportunities, and the resources they need to succeed.</p>
+          </div>
+          <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0; flex-shrink: 0;">Read more →</p>
+        </div>
+
+        <!-- NFLPA -->
+        <div onclick="showPage('article-sanders')" style="cursor: pointer; display: flex; align-items: center; gap: 1.75rem; background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem 2rem; transition: border-color 0.15s, transform 0.15s;" onmouseover="this.style.borderColor='var(--border-strong)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="flex-shrink: 0; width: 88px; height: 88px; border-radius: 12px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="NFLPA%20Logo.png" style="width: 80%; height: 80%; object-fit: contain;" alt="NFLPA">
+          </div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem;">
+              <span class="card-tag tag-nfl" style="margin: 0;">Association</span>
+              <span style="font-size: 12px; color: var(--text-muted);">Washington, DC · est. 1956</span>
+            </div>
+            <h3 style="font-size: 17px; font-weight: 500; margin: 0 0 0.35rem; line-height: 1.3;">NFL Players Association</h3>
+            <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">The union representing NFL players, which named Emmanuel Sanders a Week 3 Community MVP and a top-five finalist for its 2022 Alan Page Community Award.</p>
           </div>
           <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0; flex-shrink: 0;">Read more →</p>
         </div>
@@ -1186,6 +1254,48 @@
       <p>Learn more about SMU Athletics and their mission off the court at <a href="https://smumustangs.com/sports/2022/9/4/life-skills-community" target="_blank" rel="noopener" style="color: #378ADD; font-weight: 500; text-decoration: none;">smumustangs.com →</a></p>
 
       <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charles Kunkel · Published Monday, September 14, 2026 at 5:00 PM ET</p>
+    </div>
+  </div>
+
+  <!-- ARTICLE PAGE: Built on the Hilltop (Emmanuel Sanders) -->
+  <div id="page-article-sanders" class="page">
+    <div class="article-body">
+      <button class="article-back" onclick="showPage('stories')">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to stories
+      </button>
+
+      <div style="margin-bottom: 1rem;">
+        <span class="card-tag tag-nfl" style="font-size: 12px; padding: 4px 12px;">NFL</span>
+      </div>
+
+      <h1 style="font-family: 'Fraunces', serif; font-size: 40px; font-weight: 400; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 1.5rem;">Built on the Hilltop</h1>
+
+      <div style="font-size: 13px; color: var(--text-muted); display: flex; gap: 1.25rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 0.5px solid var(--border);">
+        <span>September 2026</span>
+        <span>3 min read</span>
+        <span>By Off Court Insider</span>
+      </div>
+
+      <div style="margin: 0 0 2.5rem; border-radius: var(--radius-lg); overflow: hidden; border: 0.5px solid var(--border);">
+        <img src="Emmanuel%20Sanders%20Community.jpg" style="width: 100%; display: block;" alt="Emmanuel Sanders with kids and teachers in Buffalo">
+      </div>
+      <p style="font-size: 11px; color: var(--text-muted); margin-top: -2rem; margin-bottom: 2rem;">Photo NFLPA</p>
+
+      <p>Emmanuel Sanders learned what giving back looks like as a Mustang in Dallas. Now his foundation is making sure kids have the food, support, and opportunity to chase their dreams. Before his Super Bowl ring, before Pittsburgh, Denver, and Buffalo, Emmanuel Sanders was a wide receiver at SMU, a Texas kid from Bellville. Being a student athlete in Dallas taught him something greater than football. It's a city that shows up for its neighbors, where giving back is how things are done. SMU laid the foundation. Sanders became the push that drives the mission forward.</p>
+
+      <p>At SMU, community service is part of what it means to wear the jersey. In college he learned early that a platform comes with responsibility. Sanders is what that lesson looks like years down the road. He carried the Mustang mindset to every city he played in through his foundation. Sanders launched his foundation in Denver in 2017 and relaunched it in Buffalo in 2021 after joining the Bills. His mission is to give kids from low-income families the resources they need to succeed, from holiday support to educational opportunities that open doors their circumstances might remain closed.</p>
+
+      <p>Before a child can think about college or a career, they need to eat. That's why Sanders became a spokesperson for the Field &amp; Fork Network, this organization connects vulnerable communities across New York with fresh, healthy food. Hunger is a barrier, a hungry child can't focus in class or plan for tomorrow. If you put food on the table, that kid gets the chance to imagine what comes next.</p>
+
+      <div style="margin: 2.5rem 0;">
+        <p style="font-size: 26px; font-weight: 500; line-height: 1.4; color: var(--text); margin: 0 0 0.5rem; font-family: 'Fraunces', serif; font-style: italic;">"When I entered the NFL, I knew I wanted to give back because so many people gave back to me when I was growing up."</p>
+        <p style="font-size: 13px; color: var(--text-muted); margin: 0;">— Emmanuel Sanders</p>
+      </div>
+
+      <p>Emmanuel's mission doesn't stop there. He lost his mother on November 1, 2011, when he was 24 years old, and he knows that many kids lose a parent even younger. That's why he gives back every holiday season, making sure children who are missing a parent still have gifts to open and someone who shows up for them. This is the kind of leadership athletics needs off the field.</p>
+
+      <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charlie Kunkel · Published Monday, September 28, 2026 at 5:00 PM ET</p>
     </div>
   </div>
 
