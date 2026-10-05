@@ -224,7 +224,23 @@
         <!-- Track -->
         <div id="carousel-track" style="display: flex; transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);">
 
-          <!-- Slide 0: Built on the Hilltop -->
+          <!-- Slide 0: Allen's Young Designers -->
+          <div class="carousel-slide" onclick="showPage('article-allen')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
+            <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0; background:#00338D; -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent); mask-image:linear-gradient(to bottom, #000 78%, transparent);">
+              <img src="Josh%20Allen%20Billustration%20Check.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:center 30%;" alt="Josh Allen holding a check for the Patricia Allen Fund">
+            </div>
+            <div style="padding:1.75rem 2rem 2rem;">
+              <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.85rem;">
+                <span class="card-tag tag-nfl" style="margin:0;">NFL</span>
+                <span style="font-size:12px; color:var(--text-muted);">2 min read · October 2026</span>
+              </div>
+              <h3 style="font-family:'Fraunces',serif; font-size:28px; font-weight:400; line-height:1.2; margin-bottom:0.75rem;">Allen's Young Designers</h3>
+              <p style="font-size:15px; color:var(--text-muted); line-height:1.7; margin-bottom:1.25rem;">Young patients at Golisano Children's Hospital of Buffalo are designing the caps Josh Allen wears into Highmark Stadium, and every cap sold raises money for their hospital.</p>
+              <span style="font-size:13px; color:var(--accent); font-weight:500;">Read story →</span>
+            </div>
+          </div>
+
+          <!-- Slide 1: Built on the Hilltop -->
           <div class="carousel-slide" onclick="showPage('article-sanders')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
             <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0; background:#0033A0; -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent); mask-image:linear-gradient(to bottom, #000 78%, transparent);">
               <img src="Emmanuel%20Sanders%20Community.jpg" style="width:100%; height:100%; object-fit:cover;" alt="Emmanuel Sanders with kids and teachers in Buffalo">
@@ -335,6 +351,7 @@
           <button id="dot-3" onclick="carouselGoTo(3)" style="width:8px; height:8px; border-radius:50%; border:none; background:var(--text); opacity:0.3; cursor:pointer; padding:0; transition:opacity 0.2s;"></button>
           <button id="dot-4" onclick="carouselGoTo(4)" style="width:8px; height:8px; border-radius:50%; border:none; background:var(--text); opacity:0.3; cursor:pointer; padding:0; transition:opacity 0.2s;"></button>
           <button id="dot-5" onclick="carouselGoTo(5)" style="width:8px; height:8px; border-radius:50%; border:none; background:var(--text); opacity:0.3; cursor:pointer; padding:0; transition:opacity 0.2s;"></button>
+          <button id="dot-6" onclick="carouselGoTo(6)" style="width:8px; height:8px; border-radius:50%; border:none; background:var(--text); opacity:0.3; cursor:pointer; padding:0; transition:opacity 0.2s;"></button>
         </div>
 
       </div><!-- /carousel -->
@@ -348,8 +365,8 @@
       </div>
 
       <div class="stats">
-        <div class="stat"><div class="stat-num">10</div><div class="stat-label">Stories published</div></div>
-        <div class="stat"><div class="stat-num">8</div><div class="stat-label">Athletes covered</div></div>
+        <div class="stat"><div class="stat-num">11</div><div class="stat-label">Stories published</div></div>
+        <div class="stat"><div class="stat-num">9</div><div class="stat-label">Athletes covered</div></div>
         <div class="stat"><div class="stat-num">11</div><div class="stat-label">Communities featured</div></div>
       </div>
     </section>
@@ -374,6 +391,13 @@
     <section class="section" style="padding-top: 1.5rem;">
       <div style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 30px; color: var(--text); margin-bottom: 2rem;">Catalog</div>
       <div class="cards-grid">
+        <div class="card" onclick="showPage('article-allen')" style="padding-top: 0; overflow: hidden;">
+          <img class="card-img" src="Josh%20Allen%20Billustration%20Check.jpeg" style="object-position: center 30%;">
+          <div class="card-tag tag-nfl">NFL</div>
+          <h3>Allen's Young Designers</h3>
+          <p>Young patients at Golisano Children's Hospital of Buffalo are designing the caps Josh Allen wears into Highmark Stadium, and every cap sold raises money for their hospital.</p>
+          <div class="card-meta"><span>2 min read</span><span>October 2026</span></div>
+        </div>
         <div class="card" onclick="showPage('article-sanders')" style="padding-top: 0; overflow: hidden;">
           <img class="card-img" src="Emmanuel%20Sanders%20Community.jpg" style="object-position: center;">
           <div class="card-tag tag-nfl">NFL</div>
@@ -559,6 +583,18 @@
             <span style="display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 8px; background: #013369; color: #fff; margin-bottom: 0.75rem;">NFL</span>
             <h3 style="font-family: 'Fraunces', serif; font-size: 22px; font-weight: 400; margin: 0 0 0.5rem; line-height: 1.2;">Emmanuel Sanders</h3>
             <p style="font-size: 14px; color: var(--text-muted); margin: 0 0 1rem; line-height: 1.6;">SMU alum, Super Bowl champion, and founder of the Emmanuel Sanders Foundation, fighting food insecurity and opening doors for kids from low-income families.</p>
+            <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0;">Read his story →</p>
+          </div>
+        </div>
+
+        <div onclick="showPage('article-allen')" style="cursor: pointer; border: 0.5px solid rgba(242,236,225,0.12); border-radius: 12px; overflow: hidden; transition: transform 0.15s, border-color 0.15s;" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='rgba(242,236,225,0.24)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='rgba(242,236,225,0.12)'">
+          <div style="width: 100%; height: 320px; overflow: hidden;">
+            <img src="Josh%20Allen%20Headshot.png" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" alt="Josh Allen">
+          </div>
+          <div style="padding: 1.25rem 1.35rem 1.5rem;">
+            <span style="display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 8px; background: #013369; color: #fff; margin-bottom: 0.75rem;">NFL</span>
+            <h3 style="font-family: 'Fraunces', serif; font-size: 22px; font-weight: 400; margin: 0 0 0.5rem; line-height: 1.2;">Josh Allen</h3>
+            <p style="font-size: 14px; color: var(--text-muted); margin: 0 0 1rem; line-height: 1.6;">Bills quarterback who wears caps designed by young patients at Golisano Children's Hospital of Buffalo, raising money for the Patricia Allen Fund.</p>
             <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0;">Read his story →</p>
           </div>
         </div>
@@ -1296,6 +1332,57 @@
       <p>Emmanuel's mission doesn't stop there. He lost his mother on November 1, 2011, when he was 24 years old, and he knows that many kids lose a parent even younger. That's why he gives back every holiday season, making sure children who are missing a parent still have gifts to open and someone who shows up for them. This is the kind of leadership athletics needs off the field.</p>
 
       <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charlie Kunkel · Published Monday, September 28, 2026 at 5:00 PM ET</p>
+    </div>
+  </div>
+
+  <!-- ARTICLE PAGE: Allen's Young Designers (Josh Allen / Billustration) -->
+  <div id="page-article-allen" class="page">
+    <div class="article-body">
+      <button class="article-back" onclick="showPage('stories')">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to stories
+      </button>
+
+      <div style="margin-bottom: 1rem;">
+        <span class="card-tag tag-nfl" style="font-size: 12px; padding: 4px 12px;">NFL</span>
+      </div>
+
+      <h1 style="font-family: 'Fraunces', serif; font-size: 40px; font-weight: 400; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 1.5rem;">Allen's Young Designers</h1>
+
+      <div style="font-size: 13px; color: var(--text-muted); display: flex; gap: 1.25rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 0.5px solid var(--border);">
+        <span>October 2026</span>
+        <span>2 min read</span>
+        <span>By Off Court Insider</span>
+      </div>
+
+      <div style="margin: 0 0 2.5rem; border-radius: var(--radius-lg); overflow: hidden; border: 0.5px solid var(--border);">
+        <img src="Josh%20Allen%20Billustration%20Check.jpeg" style="width: 100%; display: block;" alt="Josh Allen holding a $140,230 check for the Patricia Allen Fund">
+      </div>
+      <p style="font-size: 11px; color: var(--text-muted); margin-top: -2rem; margin-bottom: 2rem;">Photo: New Era Cap Foundation, Josh Allen and Golisano Children's Hospital of Buffalo (via Instagram)</p>
+
+      <p>Josh Allen's pregame outfit is about more than designer fashion this season. For the second straight year, the Bills quarterback and New Era Cap have teamed up with Golisano Children's Hospital of Buffalo for the Billustration campaign, in which young patients design the caps Allen wears into Highmark Stadium for each home game.</p>
+
+      <p>Nine children designed eight hats for the 2026 season. Allen has already worn Jack's design for the home opener against the Lions, Mason's against the Chargers on Sept. 27, and Charlotte's against the Patriots this past Sunday.</p>
+
+      <p style="margin-bottom: 0.5rem;">Still to come:</p>
+      <ul style="margin: 0 0 1.5rem 1.25rem; padding: 0; line-height: 1.8;">
+        <li>Bills vs. Ravens: Isaac (Nov. 1)</li>
+        <li>Bills vs. Dolphins: Avery &amp; Amar'e (Nov. 22)</li>
+        <li>Bills vs. Chiefs: Killian (Nov. 26)</li>
+        <li>Bills vs. Bears: Caleb (Dec. 19)</li>
+        <li>Bills vs. Jets: Grace (Jan. TBD)</li>
+      </ul>
+
+      <div style="margin: 2.5rem 0; border-radius: var(--radius-lg); overflow: hidden; border: 0.5px solid var(--border);">
+        <img src="Billustration%20Hats.jpeg" style="width: 100%; display: block;" alt="The eight Billustration caps designed by Golisano Children's Hospital patients">
+      </div>
+      <p style="font-size: 11px; color: var(--text-muted); margin-top: -2rem; margin-bottom: 2rem;">Photo: New Era Cap (via Facebook)</p>
+
+      <p>For a child in the hospital, turning on the Bills game and seeing their artwork on their favorite player is a moment they won't forget.</p>
+
+      <p>The campaign also gives back. Every cap is sold through New Era, with proceeds going to the Patricia Allen Fund, named for Josh's grandmother, who passed away in 2020. Last year's campaign raised more than $140,000 for the hospital, and this season is set to build on that success while bringing Buffalo's community together behind its kids.</p>
+
+      <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charlie Kunkel · Published Monday, October 5, 2026 at 5:00 PM ET</p>
     </div>
   </div>
 
