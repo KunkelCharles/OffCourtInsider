@@ -224,7 +224,23 @@
         <!-- Track -->
         <div id="carousel-track" style="display: flex; transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);">
 
-          <!-- Slide 0: Allen's Young Designers -->
+          <!-- Slide 0: It's All About the Kids -->
+          <div class="carousel-slide" onclick="showPage('article-saban')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
+            <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0; background:#9E1B32; -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent); mask-image:linear-gradient(to bottom, #000 78%, transparent);">
+              <img src="Nick%20Saban%20Nicks%20Kids%20Luncheon.jpg" style="width:100%; height:100%; object-fit:cover; object-position:center 25%;" alt="Nick Saban posing with kids at a Nick's Kids Foundation event">
+            </div>
+            <div style="padding:1.75rem 2rem 2rem;">
+              <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.85rem;">
+                <span class="card-tag tag-ncaa" style="margin:0;">NCAA</span>
+                <span style="font-size:12px; color:var(--text-muted);">4 min read · October 2026</span>
+              </div>
+              <h3 style="font-family:'Fraunces',serif; font-size:28px; font-weight:400; line-height:1.2; margin-bottom:0.75rem;">It's All About the Kids</h3>
+              <p style="font-size:15px; color:var(--text-muted); line-height:1.7; margin-bottom:1.25rem;">Nick Saban won seven national championships, but the work he's proudest of is off the field: nearly three decades of playgrounds, homes and gathering places built through the Nick's Kids Foundation.</p>
+              <span style="font-size:13px; color:var(--accent); font-weight:500;">Read story →</span>
+            </div>
+          </div>
+
+          <!-- Slide 1: Allen's Young Designers -->
           <div class="carousel-slide" onclick="showPage('article-allen')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
             <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0; background:#00338D; -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent); mask-image:linear-gradient(to bottom, #000 78%, transparent);">
               <img src="Josh%20Allen%20Billustration%20Check%20HD.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:center 30%;" alt="Josh Allen holding a check for the Patricia Allen Fund">
@@ -357,8 +373,8 @@
       </div>
 
       <div class="stats">
-        <div class="stat"><div class="stat-num">10</div><div class="stat-label">Stories published</div></div>
-        <div class="stat"><div class="stat-num">8</div><div class="stat-label">Athletes covered</div></div>
+        <div class="stat"><div class="stat-num">11</div><div class="stat-label">Stories published</div></div>
+        <div class="stat"><div class="stat-num">9</div><div class="stat-label">Athletes covered</div></div>
         <div class="stat"><div class="stat-num">11</div><div class="stat-label">Communities featured</div></div>
       </div>
     </section>
@@ -383,6 +399,13 @@
     <section class="section" style="padding-top: 1.5rem;">
       <div style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 30px; color: var(--text); margin-bottom: 2rem;">Catalog</div>
       <div class="cards-grid">
+        <div class="card" onclick="showPage('article-saban')" style="padding-top: 0; overflow: hidden;">
+          <img class="card-img" src="Nick%20Saban%20Nicks%20Kids%20Luncheon.jpg" style="object-position: center 25%;">
+          <div class="card-tag tag-ncaa">NCAA</div>
+          <h3>It's All About the Kids</h3>
+          <p>Nick Saban won seven national championships, but the work he's proudest of is off the field: nearly three decades of playgrounds, homes and gathering places built through the Nick's Kids Foundation.</p>
+          <div class="card-meta"><span>4 min read</span><span>October 2026</span></div>
+        </div>
         <div class="card" onclick="showPage('article-allen')" style="padding-top: 0; overflow: hidden;">
           <img class="card-img" src="Josh%20Allen%20Billustration%20Check%20HD.jpeg" style="object-position: center 30%;">
           <div class="card-tag tag-nfl">NFL</div>
@@ -567,6 +590,18 @@
             <span style="display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 8px; background: #013369; color: #fff; margin-bottom: 0.75rem;">NFL</span>
             <h3 style="font-family: 'Fraunces', serif; font-size: 22px; font-weight: 400; margin: 0 0 0.5rem; line-height: 1.2;">Josh Allen</h3>
             <p style="font-size: 14px; color: var(--text-muted); margin: 0 0 1rem; line-height: 1.6;">Bills quarterback who wears caps designed by young patients at Golisano Children's Hospital of Buffalo, raising money for the Patricia Allen Fund.</p>
+            <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0;">Read his story →</p>
+          </div>
+        </div>
+
+        <div onclick="showPage('article-saban')" style="cursor: pointer; border: 0.5px solid rgba(242,236,225,0.12); border-radius: 12px; overflow: hidden; transition: transform 0.15s, border-color 0.15s;" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='rgba(242,236,225,0.24)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='rgba(242,236,225,0.12)'">
+          <div style="width: 100%; height: 320px; overflow: hidden;">
+            <img src="Nick%20Saban%20Headshot.jpg" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" alt="Nick Saban">
+          </div>
+          <div style="padding: 1.25rem 1.35rem 1.5rem;">
+            <span style="display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 8px; background: #12284F; color: #fff; margin-bottom: 0.75rem;">NCAA</span>
+            <h3 style="font-family: 'Fraunces', serif; font-size: 22px; font-weight: 400; margin: 0 0 0.5rem; line-height: 1.2;">Nick Saban</h3>
+            <p style="font-size: 14px; color: var(--text-muted); margin: 0 0 1rem; line-height: 1.6;">Seven-time national champion coach and co-founder of the Nick's Kids Foundation, which has given over $18 million to build playgrounds, homes and gathering places in Tuscaloosa.</p>
             <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0;">Read his story →</p>
           </div>
         </div>
@@ -853,6 +888,54 @@
             </div>
             <h3 style="font-size: 17px; font-weight: 500; margin: 0 0 0.35rem; line-height: 1.3;">SMU Athletics</h3>
             <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">Southern Methodist University's athletic department, where Mustang student-athletes serve their city through the Stewpot's food pantry and the Second Chance Cafe.</p>
+          </div>
+          <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0; flex-shrink: 0;">Read more →</p>
+        </div>
+
+        <!-- Nick's Kids Foundation -->
+        <div onclick="showPage('article-saban')" style="cursor: pointer; display: flex; align-items: center; gap: 1.75rem; background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem 2rem; transition: border-color 0.15s, transform 0.15s;" onmouseover="this.style.borderColor='var(--border-strong)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="flex-shrink: 0; width: 88px; height: 88px; border-radius: 12px; background: #fff; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Nicks%20Kids%20Foundation%20Logo.jpg" style="width: 100%; height: 100%; object-fit: contain;" alt="Nick's Kids Foundation">
+          </div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem;">
+              <span class="card-tag tag-community" style="margin: 0;">Foundation</span>
+              <span style="font-size: 12px; color: var(--text-muted);">Tuscaloosa, AL · est. 1998</span>
+            </div>
+            <h3 style="font-size: 17px; font-weight: 500; margin: 0 0 0.35rem; line-height: 1.3;">Nick's Kids Foundation</h3>
+            <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">Founded by Nick and Terry Saban and named for Nick's late father, the foundation has given over $18 million to children, family, teacher and student causes, from playgrounds to Habitat for Humanity homes.</p>
+          </div>
+          <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0; flex-shrink: 0;">Read more →</p>
+        </div>
+
+        <!-- Alabama Athletics -->
+        <div onclick="showPage('article-saban')" style="cursor: pointer; display: flex; align-items: center; gap: 1.75rem; background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem 2rem; transition: border-color 0.15s, transform 0.15s;" onmouseover="this.style.borderColor='var(--border-strong)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="flex-shrink: 0; width: 88px; height: 88px; border-radius: 12px; background: #fff; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="Alabama%20Athletics%20Logo.png" style="width: 80%; height: 80%; object-fit: contain;" alt="Alabama Athletics">
+          </div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem;">
+              <span class="card-tag tag-ncaa" style="margin: 0;">NCAA</span>
+              <span style="font-size: 12px; color: var(--text-muted);">Tuscaloosa, AL · est. 1892</span>
+            </div>
+            <h3 style="font-size: 17px; font-weight: 500; margin: 0 0 0.35rem; line-height: 1.3;">Alabama Athletics</h3>
+            <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">The Crimson Tide program where Nick Saban won six national championships and built a lasting home for the Nick's Kids Foundation in Tuscaloosa.</p>
+          </div>
+          <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0; flex-shrink: 0;">Read more →</p>
+        </div>
+
+        <!-- ESPN College Football -->
+        <div onclick="showPage('article-saban')" style="cursor: pointer; display: flex; align-items: center; gap: 1.75rem; background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem 2rem; transition: border-color 0.15s, transform 0.15s;" onmouseover="this.style.borderColor='var(--border-strong)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="flex-shrink: 0; width: 88px; height: 88px; border-radius: 12px; background: #fff; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="ESPN%20College%20Football%20Logo.webp" style="width: 80%; height: 80%; object-fit: contain;" alt="ESPN College Football">
+          </div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem;">
+              <span class="card-tag tag-ncaa" style="margin: 0;">Media</span>
+              <span style="font-size: 12px; color: var(--text-muted);">Bristol, CT · est. 1979</span>
+            </div>
+            <h3 style="font-size: 17px; font-weight: 500; margin: 0 0 0.35rem; line-height: 1.3;">ESPN College Football</h3>
+            <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">Home of College GameDay, where Nick Saban now breaks down the game as an analyst after retiring from coaching.</p>
           </div>
           <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0; flex-shrink: 0;">Read more →</p>
         </div>
@@ -1320,6 +1403,62 @@
       <p>The campaign also gives back. Every cap is sold through New Era, with proceeds going to the Patricia Allen Fund, named for Josh's grandmother, who passed away in 2020. Last year's campaign raised more than $140,000 for the hospital, and this season is set to build on that success while bringing Buffalo's community together behind its kids.</p>
 
       <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charlie Kunkel · Published Monday, October 5, 2026 at 5:00 PM ET</p>
+    </div>
+  </div>
+
+  <!-- ARTICLE PAGE: It's All About the Kids (Nick Saban / Nick's Kids Foundation) -->
+  <div id="page-article-saban" class="page">
+    <div class="article-body">
+      <button class="article-back" onclick="showPage('stories')">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to stories
+      </button>
+
+      <div style="margin-bottom: 1rem;">
+        <span class="card-tag tag-ncaa" style="font-size: 12px; padding: 4px 12px;">NCAA</span>
+      </div>
+
+      <h1 style="font-family: 'Fraunces', serif; font-size: 40px; font-weight: 400; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 1.5rem;">It's All About the Kids</h1>
+
+      <div style="font-size: 13px; color: var(--text-muted); display: flex; gap: 1.25rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 0.5px solid var(--border);">
+        <span>October 2026</span>
+        <span>4 min read</span>
+        <span>By Off Court Insider</span>
+      </div>
+
+      <div style="margin: 0 0 2.5rem; border-radius: var(--radius-lg); overflow: hidden; border: 0.5px solid var(--border);">
+        <img src="Nick%20Saban%20Nicks%20Kids%20Luncheon.jpg" style="width: 100%; display: block;" alt="Nick Saban posing with kids at a Nick's Kids Foundation event">
+      </div>
+      <p style="font-size: 11px; color: var(--text-muted); margin-top: -2rem; margin-bottom: 2rem;">Photo: Kent Gidley/Alabama Athletics</p>
+
+      <p>Nick Saban built the greatest résumé in college football history. The work he is proudest of happened off the field. Saban won seven national championships, one at LSU in 2003 and six at Alabama, over 28 seasons as a college head coach. His career ran through Toledo, Michigan State, LSU and Alabama, along with NFL jobs as the Cleveland Browns' defensive coordinator (1991–1994) and the Miami Dolphins' head coach (2005–2006). He finished 297-71-1. In January 2025 he was named the first member of the College Football Hall of Fame's 2025 class. Today he covers the game as an analyst on ESPN's College GameDay and The Pat McAfee Show. Most fans know the national championship trophies and rings; fewer know that for nearly three decades, Saban and his wife, Terry, have been quietly building playgrounds, homes and gathering places for the people of their community.</p>
+
+      <div style="margin: 2.5rem 0;">
+        <p style="font-size: 26px; font-weight: 500; line-height: 1.4; color: var(--text); margin: 0 0 0.5rem; font-family: 'Fraunces', serif; font-style: italic;">"Even though we are not the coach anymore, we are still a part of our community and we want to help promote this community and the people that helped us."</p>
+        <p style="font-size: 13px; color: var(--text-muted); margin: 0;">— Nick Saban, via WVTM 13</p>
+      </div>
+
+      <p>Nick and Terry Saban founded the Nick's Kids Foundation in 1998, while Nick was coaching at Michigan State. They named it in honor of his late father, Nick Saban Sr. The foundation's mission is "To work together in the spirit of faith and giving in our community. To promote and support children, family, teacher and student causes. It's all about the kids!" The Sabans carried the foundation with them to LSU, Miami and Tuscaloosa. According to the foundation, it has now given over $18 million to charities and causes. Much of that money was raised through luncheons, golf tournaments and scrimmages the Sabans host themselves. For Nick, giving back has never been only about writing checks. He has said the foundation exists to help young people create opportunities for a better life. Often that means building something a community can see and use every day.</p>
+
+      <p><a href="https://www.nickskidsfoundation.org" target="_blank" rel="noopener" style="font-size: 13px; color: #378ADD; font-weight: 500; text-decoration: none;">nickskidsfoundation.org →</a></p>
+
+      <p>The clearest marks of Nick's Kids are the playgrounds it has helped build across Tuscaloosa. The Sabans believe the foundation a child gets early makes all the difference, and three projects show it.</p>
+
+      <p><strong>Tuscaloosa Riverwalk Playground.</strong> Nick's Kids partnered with the City of Tuscaloosa, Alabama Forever, the Junior League of Tuscaloosa and others to build a playground along the city's Riverwalk on the Black Warrior River. Nick and Terry cut the ribbon themselves.</p>
+
+      <p><strong>Alberta School of Performing Arts Playground.</strong> The April 27, 2011 tornado destroyed the Alberta school. When the rebuilt school reopened, Nick's Kids and Alabama Forever gave it a new $70,000 playground, dedicated in 2015. At the ceremony, Mayor Walt Maddox credited the Sabans for helping the city recover.</p>
+
+      <p><strong>The Tuscaloosa All-Inclusive Playground.</strong> This playground at Sokol Park was designed so children of every age and ability can play side by side. Nick's Kids was a major donor alongside the PARA Foundation and local governments, and Phase One opened in April 2021.</p>
+
+      <p>The building did not stop with playgrounds. Nick's Kids has also sponsored 21 Habitat for Humanity homes.</p>
+
+      <p>Saban's faith has shaped him as much as football has, and his giving reflects it. Nick and his wife, Terry, are devout Catholics who worship at St. Francis of Assisi University Parish on Alabama's campus. When the parish set out to build a new student center, the Sabans gave substantial seed money and helped raise much of the rest. The Saban Catholic Student Center opened in 2016, named in honor of the family. Today the center gives students a place to study, gather and share a meal after Mass. Its doors are open to everyone, Catholic or not.</p>
+
+      <p>Saban was famously intense about football. He was just as serious about reminding his players that the game was a platform, not the whole point. He encouraged many of them to start foundations, nonprofits and charities of their own, so the habit of giving would outlast their playing days. Retirement has not slowed the Sabans down. In 2025, Nick's Kids funded a new playground at Civitan Park in Northport. The foundation is also leading the Saban Center, a STEM and arts education hub rising in Tuscaloosa's River District that is set to open in 2027.</p>
+
+      <p>The championships made Nick Saban a legend. The playgrounds, homes and student center are what Tuscaloosa's kids will actually grow up with. For Nick and Terry, that was always the point: it's all about the kids.</p>
+
+      <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charlie Kunkel · Published Monday, October 12, 2026 at 5:00 PM ET</p>
     </div>
   </div>
 
