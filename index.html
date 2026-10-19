@@ -63,6 +63,7 @@
     .tag-ncaa { background: #12284F; color: #fff; }
     .tag-nba { background: #1D428A; color: #fff; }
     .tag-wnba { background: #E05A00; color: #fff; }
+    .tag-media { background: #5B2A86; color: #fff; }
     .card h3 { font-size: 15px; font-weight: 500; line-height: 1.45; margin-bottom: 0.5rem; }
     .card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
     .card-meta { margin-top: 1rem; font-size: 11.5px; font-family: 'IBM Plex Mono', monospace; color: var(--text-muted); display: flex; gap: 1rem; }
@@ -224,7 +225,23 @@
         <!-- Track -->
         <div id="carousel-track" style="display: flex; transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);">
 
-          <!-- Slide 0: The Safety Net -->
+          <!-- Slide 0: Leading With Heart -->
+          <div class="carousel-slide" onclick="showPage('article-sims')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
+            <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0; background:linear-gradient(135deg,#3A1C5C 0%,#5B2A86 55%,#8A4FBF 100%); display:flex; align-items:center; justify-content:center; -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent); mask-image:linear-gradient(to bottom, #000 78%, transparent);">
+              <span style="font-family:'Fraunces',serif; font-size:56px; font-weight:400; color:#fff; letter-spacing:-0.5px; text-align:center; padding:0 1.5rem;">Leading With Heart</span>
+            </div>
+            <div style="padding:1.75rem 2rem 2rem;">
+              <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.85rem;">
+                <span class="card-tag tag-media" style="margin:0;">Media</span>
+                <span style="font-size:12px; color:var(--text-muted);">2 min read · October 2026</span>
+              </div>
+              <h3 style="font-family:'Fraunces',serif; font-size:28px; font-weight:400; line-height:1.2; margin-bottom:0.75rem;">Leading With Heart</h3>
+              <p style="font-size:15px; color:var(--text-muted); line-height:1.7; margin-bottom:1.25rem;">Jess Sims never played professionally, but from the classroom to the sideline she has made a career out of lifting the people around her.</p>
+              <span style="font-size:13px; color:var(--accent); font-weight:500;">Read story →</span>
+            </div>
+          </div>
+
+          <!-- Slide 1: The Safety Net -->
           <div class="carousel-slide" onclick="showPage('article-hamilton')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
             <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0; background:#241773; -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent); mask-image:linear-gradient(to bottom, #000 78%, transparent);">
               <img src="Kyle%20Hamilton%20Blessings%20in%20a%20Backpack.jpg" style="width:100%; height:100%; object-fit:cover; object-position:center 35%;" alt="Kyle Hamilton holding a Preston Cares check for Blessings in a Backpack">
@@ -389,8 +406,8 @@
       </div>
 
       <div class="stats">
-        <div class="stat"><div class="stat-num">12</div><div class="stat-label">Stories published</div></div>
-        <div class="stat"><div class="stat-num">10</div><div class="stat-label">Athletes covered</div></div>
+        <div class="stat"><div class="stat-num">13</div><div class="stat-label">Stories published</div></div>
+        <div class="stat"><div class="stat-num">11</div><div class="stat-label">Athletes covered</div></div>
         <div class="stat"><div class="stat-num">11</div><div class="stat-label">Communities featured</div></div>
       </div>
     </section>
@@ -415,6 +432,13 @@
     <section class="section" style="padding-top: 1.5rem;">
       <div style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 30px; color: var(--text); margin-bottom: 2rem;">Catalog</div>
       <div class="cards-grid">
+        <div class="card" onclick="showPage('article-sims')" style="padding-top: 0; overflow: hidden;">
+          <div class="card-img" style="background:linear-gradient(135deg,#3A1C5C 0%,#5B2A86 55%,#8A4FBF 100%); display:flex; align-items:center; justify-content:center;"><span style="font-family:'Fraunces',serif; font-size:26px; color:#fff;">Leading With Heart</span></div>
+          <div class="card-tag tag-media">Media</div>
+          <h3>Leading With Heart</h3>
+          <p>Jess Sims never played professionally, but from the classroom to the sideline she has made a career out of lifting the people around her.</p>
+          <div class="card-meta"><span>2 min read</span><span>October 2026</span></div>
+        </div>
         <div class="card" onclick="showPage('article-hamilton')" style="padding-top: 0; overflow: hidden;">
           <img class="card-img" src="Kyle%20Hamilton%20Blessings%20in%20a%20Backpack.jpg" style="object-position: center 35%;">
           <div class="card-tag tag-nfl">NFL</div>
@@ -638,6 +662,18 @@
             <h3 style="font-family: 'Fraunces', serif; font-size: 22px; font-weight: 400; margin: 0 0 0.5rem; line-height: 1.2;">Kyle Hamilton</h3>
             <p style="font-size: 14px; color: var(--text-muted); margin: 0 0 1rem; line-height: 1.6;">Baltimore Ravens safety and captain who fights childhood hunger with Blessings in a Backpack, represents Our Military Kids, and renovated a weight room for St. Frances Academy athletes.</p>
             <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0;">Read his story →</p>
+          </div>
+        </div>
+
+        <div onclick="showPage('article-sims')" style="cursor: pointer; border: 0.5px solid rgba(242,236,225,0.12); border-radius: 12px; overflow: hidden; transition: transform 0.15s, border-color 0.15s;" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='rgba(242,236,225,0.24)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='rgba(242,236,225,0.12)'">
+          <div style="width: 100%; height: 320px; overflow: hidden; background:linear-gradient(135deg,#3A1C5C 0%,#5B2A86 55%,#8A4FBF 100%); display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: 'Fraunces', serif; font-size: 72px; color: #fff;">JS</span>
+          </div>
+          <div style="padding: 1.25rem 1.35rem 1.5rem;">
+            <span style="display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 8px; background: #5B2A86; color: #fff; margin-bottom: 0.75rem;">Media</span>
+            <h3 style="font-family: 'Fraunces', serif; font-size: 22px; font-weight: 400; margin: 0 0 0.5rem; line-height: 1.2;">Jess Sims</h3>
+            <p style="font-size: 14px; color: var(--text-muted); margin: 0 0 1rem; line-height: 1.6;">Peloton instructor, ESPN reporter and former Trinity College captain who started in the classroom with Teach For America and now champions women in coaching on the SPORT BEACH Women's Leadership Council.</p>
+            <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0;">Read her story →</p>
           </div>
         </div>
 
@@ -1438,6 +1474,42 @@
       <p>The campaign also gives back. Every cap is sold through New Era, with proceeds going to the Patricia Allen Fund, named for Josh's grandmother, who passed away in 2020. Last year's campaign raised more than $140,000 for the hospital, and this season is set to build on that success while bringing Buffalo's community together behind its kids.</p>
 
       <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charlie Kunkel · Published Monday, October 5, 2026 at 5:00 PM ET</p>
+    </div>
+  </div>
+
+  <!-- ARTICLE PAGE: Leading With Heart (Jess Sims) -->
+  <div id="page-article-sims" class="page">
+    <div class="article-body">
+      <button class="article-back" onclick="showPage('stories')">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to stories
+      </button>
+
+      <div style="margin-bottom: 1rem;">
+        <span class="card-tag tag-media" style="font-size: 12px; padding: 4px 12px;">Media</span>
+      </div>
+
+      <h1 style="font-family: 'Fraunces', serif; font-size: 40px; font-weight: 400; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 1.5rem;">Leading With Heart</h1>
+
+      <div style="font-size: 13px; color: var(--text-muted); display: flex; gap: 1.25rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 0.5px solid var(--border);">
+        <span>October 2026</span>
+        <span>2 min read</span>
+        <span>By Off Court Insider</span>
+      </div>
+
+      <p>Jess Sims laughed when she told the story. A three-year captain of the women's basketball team at Trinity College in Hartford, Connecticut, she told the audience at the PwC SMU Athletic Forum on Thursday night, October 1st, 2026, that her title had little to do with how good she was.</p>
+
+      <p>She explained what earned it: a relentless drive, paired with the ability to flip a switch and genuinely care for every teammate and person around her. That balance is still at the center of her message today. Wherever you find yourself, make a difference in that community.</p>
+
+      <p>Sims never played professionally, but her impact on athletes and young people has been far from small. Before she became a Peloton instructor and ESPN reporter, she began her career in the classroom through Teach For America, working with young students. That commitment to helping kids grow has followed her ever since.</p>
+
+      <p>In August 2023, she coached a team at Dribble for Dreams, a celebrity charity basketball game at Fordham University in the Bronx. The event benefited the Precious Dreams Foundation, a nonprofit that supports young people in foster care and those experiencing homelessness.</p>
+
+      <p>This summer, Sims was named to the inaugural SPORT BEACH Women's Leadership Council, which launched June 9, 2026. Co-chaired by Basketball Hall of Famer Candace Parker, the council brings together athletes, coaches and industry leaders to enhance visibility and leadership opportunities for women in sport. Its first-year focus is elevating female coaches and strengthening the pathways for women to enter and advance in coaching.</p>
+
+      <p>Sims has gone from the court to the classroom, the studio to the sideline, but the lesson from her Trinity days still holds. Leadership isn't measured on a stat sheet. It's measured by the people you lift along the way.</p>
+
+      <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charlie Kunkel · Published Monday, October 19, 2026 at 5:00 PM ET</p>
     </div>
   </div>
 
