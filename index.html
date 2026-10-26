@@ -225,7 +225,23 @@
         <!-- Track -->
         <div id="carousel-track" style="display: flex; transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);">
 
-          <!-- Slide 0: Leading With Heart -->
+          <!-- Slide 0: Still Home -->
+          <div class="carousel-slide" onclick="showPage('article-hayes')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
+            <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0; background:#2A1F3D; -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent); mask-image:linear-gradient(to bottom, #000 78%, transparent);">
+              <img src="Tiffany%20Hayes%20Playoffs.jpg" style="width:100%; height:100%; object-fit:cover; object-position:center 12%;" alt="Tiffany Hayes celebrating in a Golden State Valkyries jersey during the WNBA Playoffs">
+            </div>
+            <div style="padding:1.75rem 2rem 2rem;">
+              <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.85rem;">
+                <span class="card-tag tag-wnba" style="margin:0;">WNBA</span>
+                <span style="font-size:12px; color:var(--text-muted);">2 min read · October 2026</span>
+              </div>
+              <h3 style="font-family:'Fraunces',serif; font-size:28px; font-weight:400; line-height:1.2; margin-bottom:0.75rem;">Still Home</h3>
+              <p style="font-size:15px; color:var(--text-muted); line-height:1.7; margin-bottom:1.25rem;">Tiffany Hayes returns to Atlanta as the opponent in Game 6 of the WNBA Finals, but the community she built there still calls her one of its own.</p>
+              <span style="font-size:13px; color:var(--accent); font-weight:500;">Read story →</span>
+            </div>
+          </div>
+
+          <!-- Slide 1: Leading With Heart -->
           <div class="carousel-slide" onclick="showPage('article-sims')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
             <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0; background:#0D47A1; -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent); mask-image:linear-gradient(to bottom, #000 78%, transparent);">
               <img src="Jess%20Sims%20Athletic%20Forum.jpg" style="width:100%; height:100%; object-fit:cover; object-position:center 8%;" alt="Jess Sims speaking on stage at the PwC SMU Athletic Forum">
@@ -406,8 +422,8 @@
       </div>
 
       <div class="stats">
-        <div class="stat"><div class="stat-num">13</div><div class="stat-label">Stories published</div></div>
-        <div class="stat"><div class="stat-num">11</div><div class="stat-label">Athletes covered</div></div>
+        <div class="stat"><div class="stat-num">14</div><div class="stat-label">Stories published</div></div>
+        <div class="stat"><div class="stat-num">12</div><div class="stat-label">Athletes covered</div></div>
         <div class="stat"><div class="stat-num">11</div><div class="stat-label">Communities featured</div></div>
       </div>
     </section>
@@ -432,6 +448,13 @@
     <section class="section" style="padding-top: 1.5rem;">
       <div style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 30px; color: var(--text); margin-bottom: 2rem;">Catalog</div>
       <div class="cards-grid">
+        <div class="card" onclick="showPage('article-hayes')" style="padding-top: 0; overflow: hidden;">
+          <img class="card-img" src="Tiffany%20Hayes%20Playoffs.jpg" style="object-position: center 12%;">
+          <div class="card-tag tag-wnba">WNBA</div>
+          <h3>Still Home</h3>
+          <p>Tiffany Hayes returns to Atlanta as the opponent in Game 6 of the WNBA Finals, but the community she built there still calls her one of its own.</p>
+          <div class="card-meta"><span>2 min read</span><span>October 2026</span></div>
+        </div>
         <div class="card" onclick="showPage('article-sims')" style="padding-top: 0; overflow: hidden;">
           <img class="card-img" src="Jess%20Sims%20Athletic%20Forum.jpg" style="object-position: 65% 22px;">
           <div class="card-tag tag-media">Media</div>
@@ -673,6 +696,18 @@
             <span style="display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 8px; background: #5B2A86; color: #fff; margin-bottom: 0.75rem;">Media</span>
             <h3 style="font-family: 'Fraunces', serif; font-size: 22px; font-weight: 400; margin: 0 0 0.5rem; line-height: 1.2;">Jess Sims</h3>
             <p style="font-size: 14px; color: var(--text-muted); margin: 0 0 1rem; line-height: 1.6;">Peloton instructor, ESPN reporter and former Trinity College captain who started in the classroom with Teach For America and now champions women in coaching on the SPORT BEACH Women's Leadership Council.</p>
+            <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0;">Read her story →</p>
+          </div>
+        </div>
+
+        <div onclick="showPage('article-hayes')" style="cursor: pointer; border: 0.5px solid rgba(242,236,225,0.12); border-radius: 12px; overflow: hidden; transition: transform 0.15s, border-color 0.15s;" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='rgba(242,236,225,0.24)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='rgba(242,236,225,0.12)'">
+          <div style="width: 100%; height: 320px; overflow: hidden;">
+            <img src="Tiffany%20Hayes%20Headshot.jpg" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" alt="Tiffany Hayes">
+          </div>
+          <div style="padding: 1.25rem 1.35rem 1.5rem;">
+            <span style="display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 8px; background: #E05A00; color: #fff; margin-bottom: 0.75rem;">WNBA</span>
+            <h3 style="font-family: 'Fraunces', serif; font-size: 22px; font-weight: 400; margin: 0 0 0.5rem; line-height: 1.2;">Tiffany Hayes</h3>
+            <p style="font-size: 14px; color: var(--text-muted); margin: 0 0 1rem; line-height: 1.6;">Golden State Valkyries guard and ten-season Atlanta Dream veteran who founded the SEYAH Foundation, co-founded the Hoop Nation gym on Atlanta's south side, and mentors young athletes through Soar With Her.</p>
             <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0;">Read her story →</p>
           </div>
         </div>
@@ -1490,6 +1525,49 @@
       <p>The campaign also gives back. Every cap is sold through New Era, with proceeds going to the Patricia Allen Fund, named for Josh's grandmother, who passed away in 2020. Last year's campaign raised more than $140,000 for the hospital, and this season is set to build on that success while bringing Buffalo's community together behind its kids.</p>
 
       <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charlie Kunkel · Published Monday, October 5, 2026 at 5:00 PM ET</p>
+    </div>
+  </div>
+
+  <!-- ARTICLE PAGE: Still Home (Tiffany Hayes) -->
+  <div id="page-article-hayes" class="page">
+    <div class="article-body">
+      <button class="article-back" onclick="showPage('stories')">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to stories
+      </button>
+
+      <div style="margin-bottom: 1rem;">
+        <span class="card-tag tag-wnba" style="font-size: 12px; padding: 4px 12px;">WNBA</span>
+      </div>
+
+      <h1 style="font-family: 'Fraunces', serif; font-size: 40px; font-weight: 400; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 1.5rem;">Still Home</h1>
+
+      <div style="font-size: 13px; color: var(--text-muted); display: flex; gap: 1.25rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 0.5px solid var(--border);">
+        <span>October 2026</span>
+        <span>2 min read</span>
+        <span>By Off Court Insider</span>
+      </div>
+
+      <div style="margin: 0 0 2.5rem; border-radius: var(--radius-lg); overflow: hidden; border: 0.5px solid var(--border);">
+        <img src="Tiffany%20Hayes%20Playoffs.jpg" style="width: 100%; display: block;" alt="Tiffany Hayes celebrating in a Golden State Valkyries jersey during the WNBA Playoffs">
+      </div>
+      <p style="font-size: 11px; color: var(--text-muted); margin-top: -2rem; margin-bottom: 2rem;">Tiffany Hayes with the Golden State Valkyries · Photo: Getty Images / Lachlan Cunningham</p>
+
+      <p>Thursday night, Tiffany Hayes walks into State Farm Arena as the opponent.</p>
+
+      <p>For ten seasons, Atlanta was home for her. Now, at 37 years old, Hayes returns in Golden State Valkyries colors for Game 6 of the WNBA Finals, with a first-ever title on the line for both teams. This day almost never came for her; she retired after the 2023 season, came back months later, and bet on a brand-new expansion team in the Bay Area.</p>
+
+      <p>The deeper story isn't how far she has come, it is how little she has changed on the way up. Hayes founded the SEYAH Foundation to help people through mental health support, financial literacy and entrepreneurship education. On Atlanta's south side, she and her sister co-founded Hoop Nation, a gym where local kids grow through sports. And through her Soar With Her mentorship program and the Ascending Star Summit, she guides young athletes and future leaders.</p>
+
+      <p>"Community work is at the core of who I am, it's not just about giving back, it's about pouring into the same community that has poured so much love into me." —Tiffany Hayes via NBA Communications</p>
+
+      <p>Last November, the WNBA gave Hayes its Season-long Cares Community Assist Award and donated $20,000 to a youth nonprofit she chose. The lights are brighter now, but she is still the same caring person she has always been. Whatever the scoreboard says Thursday, she is already a winner.</p>
+
+      <p>On Thursday, she will be the visiting player in Atlanta, but she will not be a visitor.</p>
+
+      <p style="font-size: 14px; color: var(--text-muted);"><strong style="color: var(--text); font-weight: 500;">Game 6:</strong> Valkyries at Dream, Thursday, Oct. 29, 8 p.m. ET, Peacock and USA Network.</p>
+
+      <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charlie Kunkel · Published Monday, October 26, 2026 at 5:00 PM ET</p>
     </div>
   </div>
 
