@@ -64,6 +64,7 @@
     .tag-nba { background: #1D428A; color: #fff; }
     .tag-wnba { background: #E05A00; color: #fff; }
     .tag-media { background: #5B2A86; color: #fff; }
+    .tag-soccer { background: #0B6E4F; color: #fff; }
     .card h3 { font-size: 15px; font-weight: 500; line-height: 1.45; margin-bottom: 0.5rem; }
     .card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
     .card-meta { margin-top: 1rem; font-size: 11.5px; font-family: 'IBM Plex Mono', monospace; color: var(--text-muted); display: flex; gap: 1rem; }
@@ -225,7 +226,23 @@
         <!-- Track -->
         <div id="carousel-track" style="display: flex; transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);">
 
-          <!-- Slide 0: Still Home -->
+          <!-- Slide 0: Saka's Speech Belonged to Byiringiro -->
+          <div class="carousel-slide" onclick="showPage('article-saka')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
+            <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0; background:#0A0F24; -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent); mask-image:linear-gradient(to bottom, #000 78%, transparent);">
+              <img src="Bukayo%20Saka%20Socrates%20Award.jpg" style="width:100%; height:100%; object-fit:cover; object-position:center 22%;" alt="Bukayo Saka holding the Sócrates Award on stage at the 2026 Ballon d'Or ceremony">
+            </div>
+            <div style="padding:1.75rem 2rem 2rem;">
+              <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.85rem;">
+                <span class="card-tag tag-soccer" style="margin:0;">Soccer</span>
+                <span style="font-size:12px; color:var(--text-muted);">3 min read · November 2026</span>
+              </div>
+              <h3 style="font-family:'Fraunces',serif; font-size:28px; font-weight:400; line-height:1.2; margin-bottom:0.75rem;">Saka’s Speech Belonged to Byiringiro</h3>
+              <p style="font-size:15px; color:var(--text-muted); line-height:1.7; margin-bottom:1.25rem;">Accepting the 2026 Sócrates Award, the Arsenal winger skipped the thank-you list and read a letter from Byiringiro, a boy whose sight was restored through Saka’s work with BigShoe.</p>
+              <span style="font-size:13px; color:var(--accent); font-weight:500;">Read story →</span>
+            </div>
+          </div>
+
+          <!-- Slide 1: Still Home -->
           <div class="carousel-slide" onclick="showPage('article-hayes')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
             <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0; background:#2A1F3D; -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent); mask-image:linear-gradient(to bottom, #000 78%, transparent);">
               <img src="Tiffany%20Hayes%20Finals%20Warmup.jpg" style="width:100%; height:100%; object-fit:cover; object-position:center 20%;" alt="Tiffany Hayes walking past Golden State Valkyries Finals shirts on the court before a 2026 WNBA Finals game">
@@ -422,8 +439,8 @@
       </div>
 
       <div class="stats">
-        <div class="stat"><div class="stat-num">14</div><div class="stat-label">Stories published</div></div>
-        <div class="stat"><div class="stat-num">12</div><div class="stat-label">Athletes covered</div></div>
+        <div class="stat"><div class="stat-num">15</div><div class="stat-label">Stories published</div></div>
+        <div class="stat"><div class="stat-num">13</div><div class="stat-label">Athletes covered</div></div>
         <div class="stat"><div class="stat-num">11</div><div class="stat-label">Communities featured</div></div>
       </div>
     </section>
@@ -448,6 +465,13 @@
     <section class="section" style="padding-top: 1.5rem;">
       <div style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 30px; color: var(--text); margin-bottom: 2rem;">Catalog</div>
       <div class="cards-grid">
+        <div class="card" onclick="showPage('article-saka')" style="padding-top: 0; overflow: hidden;">
+          <img class="card-img" src="Bukayo%20Saka%20Socrates%20Award.jpg" style="object-position: 64% 20%;">
+          <div class="card-tag tag-soccer">Soccer</div>
+          <h3>Saka’s Speech Belonged to Byiringiro</h3>
+          <p>Accepting the 2026 Sócrates Award, the Arsenal winger skipped the thank-you list and read a letter from Byiringiro, a boy whose sight was restored through Saka’s work with BigShoe.</p>
+          <div class="card-meta"><span>3 min read</span><span>November 2026</span></div>
+        </div>
         <div class="card" onclick="showPage('article-hayes')" style="padding-top: 0; overflow: hidden;">
           <img class="card-img" src="Tiffany%20Hayes%20Finals%20Warmup.jpg" style="object-position: 67% 20%;">
           <div class="card-tag tag-wnba">WNBA</div>
@@ -709,6 +733,18 @@
             <h3 style="font-family: 'Fraunces', serif; font-size: 22px; font-weight: 400; margin: 0 0 0.5rem; line-height: 1.2;">Tiffany Hayes</h3>
             <p style="font-size: 14px; color: var(--text-muted); margin: 0 0 1rem; line-height: 1.6;">Golden State Valkyries guard and ten-season Atlanta Dream veteran who founded the SEYAH Foundation, co-founded the Hoop Nation gym on Atlanta's south side, and mentors young athletes through Soar With Her.</p>
             <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0;">Read her story →</p>
+          </div>
+        </div>
+
+        <div onclick="showPage('article-saka')" style="cursor: pointer; border: 0.5px solid rgba(242,236,225,0.12); border-radius: 12px; overflow: hidden; transition: transform 0.15s, border-color 0.15s;" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='rgba(242,236,225,0.24)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='rgba(242,236,225,0.12)'">
+          <div style="width: 100%; height: 320px; overflow: hidden;">
+            <img src="Bukayo%20Saka%20Headshot.jpg" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" alt="Bukayo Saka">
+          </div>
+          <div style="padding: 1.25rem 1.35rem 1.5rem;">
+            <span style="display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 8px; background: #0B6E4F; color: #fff; margin-bottom: 0.75rem;">Soccer</span>
+            <h3 style="font-family: 'Fraunces', serif; font-size: 22px; font-weight: 400; margin: 0 0 0.5rem; line-height: 1.2;">Bukayo Saka</h3>
+            <p style="font-size: 14px; color: var(--text-muted); margin: 0 0 1rem; line-height: 1.6;">Arsenal and England winger and 2026 Sócrates Award winner who, through the BigShoe foundation, has funded surgeries and medical care for more than 200 children across Nigeria, Rwanda, Kenya and Tanzania.</p>
+            <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0;">Read his story →</p>
           </div>
         </div>
 
@@ -1058,6 +1094,21 @@
             </div>
             <h3 style="font-size: 17px; font-weight: 500; margin: 0 0 0.35rem; line-height: 1.3;">Teach For America</h3>
             <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">The national nonprofit where Jess Sims began her career, teaching young students in the classroom before she became a Peloton instructor and ESPN reporter.</p>
+          </div>
+          <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0; flex-shrink: 0;">Read more →</p>
+        </div>
+
+        <div onclick="showPage('article-saka')" style="cursor: pointer; display: flex; align-items: center; gap: 1.75rem; background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem 2rem; transition: border-color 0.15s, transform 0.15s;" onmouseover="this.style.borderColor='var(--border-strong)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="flex-shrink: 0; width: 88px; height: 88px; border-radius: 12px; background: #fff; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="BigShoe%20Logo.jpg" style="width: 100%; height: 100%; object-fit: contain;" alt="BigShoe">
+          </div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem;">
+              <span class="card-tag tag-charity" style="margin: 0;">Charity</span>
+              <span style="font-size: 12px; color: var(--text-muted);">Germany</span>
+            </div>
+            <h3 style="font-size: 17px; font-weight: 500; margin: 0 0 0.35rem; line-height: 1.3;">BigShoe</h3>
+            <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">The German charitable foundation that pays for surgeries and medical care for children who couldn’t otherwise get them. Bukayo Saka has funded care for more than 200 children through BigShoe in Nigeria, Rwanda, Kenya and Tanzania.</p>
           </div>
           <p style="font-size: 12px; color: #378ADD; font-weight: 500; margin: 0; flex-shrink: 0;">Read more →</p>
         </div>
@@ -1525,6 +1576,65 @@
       <p>The campaign also gives back. Every cap is sold through New Era, with proceeds going to the Patricia Allen Fund, named for Josh's grandmother, who passed away in 2020. Last year's campaign raised more than $140,000 for the hospital, and this season is set to build on that success while bringing Buffalo's community together behind its kids.</p>
 
       <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charlie Kunkel · Published Monday, October 5, 2026 at 5:00 PM ET</p>
+    </div>
+  </div>
+
+  <!-- ARTICLE PAGE: Saka's Speech Belonged to Byiringiro (Bukayo Saka) -->
+  <div id="page-article-saka" class="page">
+    <div class="article-body">
+      <button class="article-back" onclick="showPage('stories')">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to stories
+      </button>
+
+      <div style="margin-bottom: 1rem;">
+        <span class="card-tag tag-soccer" style="font-size: 12px; padding: 4px 12px;">Soccer</span>
+      </div>
+
+      <h1 style="font-family: 'Fraunces', serif; font-size: 40px; font-weight: 400; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 1rem;">Saka’s Speech Belonged to Byiringiro</h1>
+
+      <p style="font-size: 19px; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;">Accepting the 2026 Sócrates Award, the Arsenal winger skipped the thank-you list and read a letter from Byiringiro, a boy whose sight was restored through Saka’s work with BigShoe.</p>
+
+      <div style="font-size: 13px; color: var(--text-muted); display: flex; gap: 1.25rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 0.5px solid var(--border);">
+        <span>November 2026</span>
+        <span>3 min read</span>
+        <span>By Off Court Insider</span>
+      </div>
+
+      <div style="margin: 0 0 2.5rem; border-radius: var(--radius-lg); overflow: hidden; border: 0.5px solid var(--border);">
+        <img src="Bukayo%20Saka%20Socrates%20Award.jpg" style="width: 100%; display: block;" alt="Bukayo Saka holding the Sócrates Award on stage at the 2026 Ballon d'Or ceremony">
+      </div>
+      <p style="font-size: 11px; color: var(--text-muted); margin-top: -2rem; margin-bottom: 2rem;">Bukayo Saka with the Sócrates Award at the 2026 Ballon d'Or ceremony · Photo: L'Équipe / Etienne Garnier</p>
+
+      <p>On a night built around trophies, Bukayo Saka used his time on stage to tell someone else’s story.</p>
+
+      <p>The Arsenal and England right winger received the 2026 Sócrates Award at the Ballon d’Or ceremony at the London Palladium on Oct. 26. France Football created the award in 2022 to honor a player’s humanitarian work rather than anything done on the pitch.</p>
+
+      <p>When Saka reached the podium, he didn’t talk about himself. He read a letter.</p>
+
+      <h2 style="font-family: 'Fraunces', serif; font-size: 24px; font-weight: 400; line-height: 1.3; color: var(--text); margin: 2.75rem 0 1rem;">“I can enjoy being a child again”</h2>
+
+      <p>The letter came from Byiringiro, a 14-year-old from a village in Rwanda. Saka read it to the room in full:</p>
+
+      <blockquote style="margin: 2rem 0 2.5rem; padding: 0.25rem 0 0.25rem 1.5rem; border-left: 2px solid var(--border-strong);">
+        <p style="font-size: 17px; line-height: 1.85; margin: 0 0 1.25rem;">“To everyone here tonight, my name is Byiringiro. I’m 14 years old and I live in a village in Rwanda. I want to share my story with you. When I was 12, I started losing my sight. My village has no electricity and my eyesight got worse. Even moving around my home became difficult. At school, I couldn’t read what my teachers wrote on the blackboard and I struggled to play with my friends. I just wanted to play freely and feel like every other child.</p>
+        <p style="font-size: 17px; line-height: 1.85; margin: 0 0 1.25rem;">Then, thanks to BigShoe, I received the eye care that I needed. Today, I can read the blackboard even from the back of the classroom. But more importantly, I no longer need to worry about feeling different. I can enjoy being a child again. For the first time in a long time, I’m excited about my future. I want to become an English teacher one day. I know many of you here tonight have achieved your childhood dreams, and now I believe I can achieve mine too. May God bless you all abundantly, with love and gratitude.”</p>
+        <p style="font-size: 13px; color: var(--text-muted); margin: 0;">&mdash; Byiringiro</p>
+      </blockquote>
+
+      <h2 style="font-family: 'Fraunces', serif; font-size: 24px; font-weight: 400; line-height: 1.3; color: var(--text); margin: 2.75rem 0 1rem;">The work behind the award</h2>
+
+      <p>Saka, 25, was born and raised in Ealing, West London. His parents, Adenike and Yomi Saka, are from Nigeria. Much of his charity work has pointed back toward Africa.</p>
+
+      <p>He works with BigShoe, a German charitable foundation that pays for surgeries and medical care for children who couldn’t otherwise get them. Through BigShoe, Saka funded surgeries for about 120 children in Nigeria, in 2022. The following year he supported roughly 100 more across Rwanda, Kenya and Tanzania. The care ranges from hernia operations to the kind of eye treatment that gave Byiringiro his sight back.</p>
+
+      <h2 style="font-family: 'Fraunces', serif; font-size: 24px; font-weight: 400; line-height: 1.3; color: var(--text); margin: 2.75rem 0 1rem;">The number that matters</h2>
+
+      <p>Saka will be measured by goals, assists and trophies for the rest of his career. On Oct. 26 he pointed to a different stat: a kid from a village without electricity who can now read the blackboard from the back row and wants to teach English one day.</p>
+
+      <p>Harry Kane took home the Ballon d’Or that night. Byiringiro’s letter is the speech people will remember.</p>
+
+      <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charlie Kunkel · Published Monday, November 2, 2026 at 5:00 PM ET</p>
     </div>
   </div>
 
