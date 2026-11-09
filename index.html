@@ -226,7 +226,23 @@
         <!-- Track -->
         <div id="carousel-track" style="display: flex; transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);">
 
-          <!-- Slide 0: Saka's Speech Belonged to Byiringiro -->
+          <!-- Slide 0: Mercedes Bets on the Next Generation -->
+          <div class="carousel-slide" onclick="showPage('article-mercedes')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
+            <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0; background:#0A1A1A; -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent); mask-image:linear-gradient(to bottom, #000 78%, transparent);">
+              <img src="Mercedes%20Constructors%20Champions.webp" style="width:100%; height:100%; object-fit:cover; object-position:center 30%;" alt="Mercedes-AMG Petronas team members celebrating on the podium after winning the 2026 FIA Formula 1 Constructors' World Championship">
+            </div>
+            <div style="padding:1.75rem 2rem 2rem;">
+              <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.85rem;">
+                <span class="card-tag tag-f1" style="margin:0;">F1</span>
+                <span style="font-size:12px; color:var(--text-muted);">3 min read · November 2026</span>
+              </div>
+              <h3 style="font-family:'Fraunces',serif; font-size:28px; font-weight:400; line-height:1.2; margin-bottom:0.75rem;">Mercedes Bets on the Next Generation</h3>
+              <p style="font-size:15px; color:var(--text-muted); line-height:1.7; margin-bottom:1.25rem;">In eight days, Mercedes won both Formula 1 world championships. Its biggest bet is on thousands of kids who may one day design, build or run a race car.</p>
+              <span style="font-size:13px; color:var(--accent); font-weight:500;">Read story →</span>
+            </div>
+          </div>
+
+          <!-- Slide 1: Saka's Speech Belonged to Byiringiro -->
           <div class="carousel-slide" onclick="showPage('article-saka')" style="min-width:100%; cursor:pointer; display:flex; flex-direction:column;">
             <div style="width:100%; height:440px; overflow:hidden; flex-shrink:0; background:#0A0F24; -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent); mask-image:linear-gradient(to bottom, #000 78%, transparent);">
               <img src="Bukayo%20Saka%20Socrates%20Award.jpg" style="width:100%; height:100%; object-fit:cover; object-position:center 22%;" alt="Bukayo Saka holding the Sócrates Award on stage at the 2026 Ballon d'Or ceremony">
@@ -439,9 +455,9 @@
       </div>
 
       <div class="stats">
-        <div class="stat"><div class="stat-num">15</div><div class="stat-label">Stories published</div></div>
+        <div class="stat"><div class="stat-num">16</div><div class="stat-label">Stories published</div></div>
         <div class="stat"><div class="stat-num">13</div><div class="stat-label">Athletes covered</div></div>
-        <div class="stat"><div class="stat-num">12</div><div class="stat-label">Communities featured</div></div>
+        <div class="stat"><div class="stat-num">13</div><div class="stat-label">Communities featured</div></div>
       </div>
     </section>
     <hr>
@@ -465,6 +481,13 @@
     <section class="section" style="padding-top: 1.5rem;">
       <div style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 30px; color: var(--text); margin-bottom: 2rem;">Catalog</div>
       <div class="cards-grid">
+        <div class="card" onclick="showPage('article-mercedes')" style="padding-top: 0; overflow: hidden;">
+          <img class="card-img" src="Mercedes%20Constructors%20Champions.webp" style="object-position: 40% 30%;">
+          <div class="card-tag tag-f1">F1</div>
+          <h3>Mercedes Bets on the Next Generation</h3>
+          <p>In eight days, Mercedes won both Formula 1 world championships. Its biggest bet is on thousands of kids who may one day design, build or run a race car.</p>
+          <div class="card-meta"><span>3 min read</span><span>November 2026</span></div>
+        </div>
         <div class="card" onclick="showPage('article-saka')" style="padding-top: 0; overflow: hidden;">
           <img class="card-img" src="Bukayo%20Saka%20Socrates%20Award.jpg" style="object-position: 64% 20%;">
           <div class="card-tag tag-soccer">Soccer</div>
@@ -1576,6 +1599,65 @@
       <p>The campaign also gives back. Every cap is sold through New Era, with proceeds going to the Patricia Allen Fund, named for Josh's grandmother, who passed away in 2020. Last year's campaign raised more than $140,000 for the hospital, and this season is set to build on that success while bringing Buffalo's community together behind its kids.</p>
 
       <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charlie Kunkel · Published Monday, October 5, 2026 at 5:00 PM ET</p>
+    </div>
+  </div>
+
+  <!-- ARTICLE PAGE: Mercedes Bets on the Next Generation (Mercedes-AMG Petronas) -->
+  <div id="page-article-mercedes" class="page">
+    <div class="article-body">
+      <button class="article-back" onclick="showPage('stories')">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to stories
+      </button>
+
+      <div style="margin-bottom: 1rem;">
+        <span class="card-tag tag-f1" style="font-size: 12px; padding: 4px 12px;">F1</span>
+      </div>
+
+      <h1 style="font-family: 'Fraunces', serif; font-size: 40px; font-weight: 400; line-height: 1.15; letter-spacing: -0.3px; margin-bottom: 1rem;">Mercedes Bets on the Next Generation</h1>
+
+      <p style="font-size: 19px; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;">In eight days, Mercedes won both Formula 1 world championships. Its biggest bet is on thousands of kids who may one day design, build or run a race car.</p>
+
+      <div style="font-size: 13px; color: var(--text-muted); display: flex; gap: 1.25rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 0.5px solid var(--border);">
+        <span>November 2026</span>
+        <span>3 min read</span>
+        <span>By Off Court Insider</span>
+      </div>
+
+      <div style="margin: 0 0 2.5rem; border-radius: var(--radius-lg); overflow: hidden; border: 0.5px solid var(--border);">
+        <img src="Mercedes%20Constructors%20Champions.webp" style="width: 100%; display: block;" alt="Mercedes-AMG Petronas team members celebrating on the podium after winning the 2026 FIA Formula 1 Constructors' World Championship">
+      </div>
+      <p style="font-size: 11px; color: var(--text-muted); margin-top: -2rem; margin-bottom: 2rem;">Mercedes-AMG Petronas celebrates the 2026 Constructors’ World Championship · Photo: mercedesamgf1.com</p>
+
+      <p>In the span of eight days, Mercedes-AMG Petronas went from contender to double world champion.</p>
+
+      <p>On Nov. 1 in Mexico City, 20-year-old Kimi Antonelli finished third to clinch the drivers’ world championship. At 20 years and 68 days old, he is the youngest champion in Formula 1 history, beating Sebastian Vettel’s record by more than three years. He is also the first Italian to win the title since Alberto Ascari in 1953.</p>
+
+      <p>One week later, in a rain-soaked São Paulo Grand Prix, George Russell finished fourth and Antonelli fifth. That was enough to seal the constructors’ championship, the team’s ninth and its first since 2021.</p>
+
+      <p>Antonelli’s quick rise shows what investing early can do. Mercedes brought him into its young driver program at 12 and promoted him to replace Lewis Hamilton at 18. Away from the track, the team is trying to build that same kind of pathway for a much bigger group: kids who may never drive a race car but could one day design, build or run one.</p>
+
+      <h2 style="font-family: 'Fraunces', serif; font-size: 24px; font-weight: 400; line-height: 1.3; color: var(--text); margin: 2.75rem 0 1rem;">Building the pipeline</h2>
+
+      <p>The team’s largest school program is the Future Engineers Academy, created with Star Academies and launched in Birmingham, England, in early 2025. In its first year it reached more than 1,300 students through hands-on workshops, engineering challenges and kart building. The year ended with a trip to the team’s factory in Brackley, where students presented their own designs to F1 engineers. Now in its second year, the program puts priority on groups underrepresented in engineering, including girls, students from ethnic minority backgrounds and kids from economically deprived areas.</p>
+
+      <p>According to the team, its other commitments include:</p>
+
+      <ul style="margin: 0 0 1.5rem; padding-left: 1.25rem; line-height: 1.8;">
+        <li style="margin-bottom: 0.75rem;"><strong>Mulberry STEM Academy:</strong> An after-school program run with the Mulberry Schools Trust. It aims to get more students ages 7 to 18 studying science, technology, engineering and math.</li>
+        <li style="margin-bottom: 0.75rem;"><strong>Sutton Trust:</strong> Support for the “Pathways to Engineering” program, which serves 50 students each year.</li>
+        <li style="margin-bottom: 0.75rem;"><strong>Association for Black and Minority Ethnic Engineers (AFBE):</strong> Team members spend six months mentoring engineering students who are starting careers in the industry.</li>
+        <li style="margin-bottom: 0.75rem;"><strong>Imperial College London:</strong> The Mercedes-AMG Petronas Scholarship supports aspiring aeronautical engineers from underrepresented groups. The team says it has pledged £438,000, more than half a million U.S. dollars, to help students take their next steps in STEM.</li>
+        <li style="margin-bottom: 0.75rem;"><strong>Racing Pride:</strong> A partnership to promote LGBTQ+ inclusion inside the team and across motorsport.</li>
+      </ul>
+
+      <h2 style="font-family: 'Fraunces', serif; font-size: 24px; font-weight: 400; line-height: 1.3; color: var(--text); margin: 2.75rem 0 1rem;">The next generation</h2>
+
+      <p>The trophies from Mexico City and São Paulo will go in the case at Brackley. The longer-lasting result may be in a Birmingham Academy classroom, where a student who once pitched a design to the engineers behind a championship car decides that is the job he or she wants.</p>
+
+      <p>Antonelli showed what happens when a team bets on a 12-year-old. Mercedes is now making that bet on thousands of them. The next generation is hungry to go fast and to push motorsport forward.</p>
+
+      <p style="font-size: 13px; color: var(--text-muted); margin-top: 0; padding-top: 1.5rem; border-top: 0.5px solid var(--border);">Written by Charlie Kunkel · Published Monday, November 9, 2026 at 5:00 PM ET</p>
     </div>
   </div>
 
